@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Company interview brief</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f5f0;color:#202b28;font:16px/1.55 system-ui,sans-serif}header{background:#13342c;color:white;padding:32px 22px 44px}main,.wrap{max-width:1060px;margin:auto}main{padding:18px 22px 64px}h1{font:clamp(42px,8vw,72px)/1 Georgia,serif;margin:18px 0 10px}h2{font:34px/1.1 Georgia,serif;margin:0 0 16px}h3,p{margin:0 0 8px}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.13em;text-transform:uppercase;color:#79ccb0}.meta{color:#c8e5d9}.nav{display:flex;flex-wrap:wrap;gap:16px;padding:12px 0}a{color:#14634f}section{margin-top:20px;padding:clamp(18px,4vw,30px);border:1px solid #dedfd6;background:white;border-radius:18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tile{padding:16px;background:#fff2e9;border-radius:12px}.tile h3{color:#813c25}.muted{color:#52655e}.label{display:inline-block;padding:4px 10px;border-radius:20px;background:#deeee6;color:#245344;font-size:13px}.item{padding:12px 0;border-top:1px solid #e3e7e2}.item p{margin:2px 0}.question{background:#ebf4ee;padding:14px 16px;border-radius:10px;margin:10px 0}details{margin:16px 0}#rating-snapshots{margin-top:18px}summary{cursor:pointer;font-weight:700}li{margin:7px 0}small{font-size:13px}.review-list{padding-left:24px}@media(max-width:680px){.grid{grid-template-columns:1fr}h2{font-size:29px}}
+#reviews h3{margin:18px 0 0}.review-table-wrap{margin-top:12px;overflow-x:auto}.review-table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}.review-table th,.review-table td{padding:9px 10px;vertical-align:top;border-bottom:1px solid #e3e7e2}.review-table thead{background:#f4f5f0}.review-table .rating-row th{background:#e7f0ea;color:#245344;font-size:13px}.review-table time,.review-table .source{white-space:nowrap}.review-table .feedback{display:inline-block;min-width:150px}
+.profile-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.profile-card{padding:16px;border:1px solid #e3e7e2;border-radius:12px;overflow-wrap:anywhere}.profile-card h3{line-height:1.3}.profile-card dt{color:#245344;font-weight:700;font-size:14px}.profile-card dd{margin:0 0 12px}.profile-card dl{margin:10px 0 0}.profile-card .nav{gap:6px 12px;padding:5px 0 0;font-size:14px}@media(max-width:680px){.profile-list{grid-template-columns:1fr}}
+</style></head>
+<body><header><div class="wrap"><div class="eyebrow">Interview brief</div><h1 id="company"></h1><p id="role"></p><p class="meta" id="meeting"></p></div></header>
+<main><nav class="nav" aria-label="On this page"><a href="#context">Role &amp; product</a><a href="#questions">Questions to ask</a><a href="#portfolio" hidden>Product portfolio</a><a href="#market" hidden>Market &amp; competitors</a><a href="#capital" hidden>Funding &amp; ownership</a><a href="#problems">Product problems</a><a href="#employees">Employee feedback</a></nav>
+<p id="report-error" role="alert" hidden></p>
+<section id="context"><h2>Role &amp; product</h2><div id="role-context"></div><div class="nav" id="role-sources"></div></section>
+<section id="questions"><h2>Three questions to ask</h2><div id="question-list"></div></section>
+<section id="portfolio" hidden><h2>Product portfolio</h2></section>
+<section id="market" hidden><h2>Market performance and competitors</h2></section>
+<section id="capital" hidden><h2>Funding and ownership</h2></section>
+<section id="problems"><span class="label" id="summary"></span><h2>Reported product problems</h2><div class="grid" id="themes"></div>
+<details id="review-details"><summary id="review-summary"></summary><div id="reviews"></div></details><p class="muted" id="coverage"></p><div id="rating-snapshots" hidden></div></section>
+<section id="employees"><h2>What employees say</h2><p class="muted" id="staff-coverage"></p><div id="staff"></div></section>
+</main>
+<!-- For an exported report, replace the JSON below with a validated v1 report payload.
+     Serialize JSON with less-than signs escaped as Unicode U+003C.
+     Each new section takes a summary and entries with a name, optional scope,
+     and sources [{label, url}]. Portfolio entries also take offering and users.
+     Market entries take performance, share and competitors. Capital entries
+     take type, status, date, value and details. -->
+<script id="company-report-data" type="application/json">
+{
+  "version": 1,
+  "company": "ERGO",
+  "role": "IT Product Manager · ERGO Technology & Services India",
+  "meeting": "Public company research · 19 November 2026",
+  "lookbackDays": 90,
+  "roleContext": [
+    "ERGO Technology & Services Private Limited is the ERGO Group technology hub in Mumbai. It works with the group’s German and Polish hubs on insurance systems and digital channels. HDFC ERGO General Insurance is a separate joint venture.",
+    "ERGO is the primary insurance business of Munich Re. Its offerings span property and casualty, life, health, legal protection, travel and small-business coverage across multiple markets.",
+    "Public digital workflows include photo and PDF claim submissions in the German ERGO App, policy self-service and digital correspondence in the customer portal, and AI-assisted visual inspections with CamCom in Europe. This brief covers publicly documented products and workflows."
+  ],
+  "roleSources": [
+    {
+      "label": "ERGO Technology & Services India",
+      "url": "https://www.ergo.com/en/microsite/ergo-technology-services-india"
+    },
+    {
+      "label": "Global technology operating model",
+      "url": "https://www.ergo.com/en/company/about-ergo/technology-and-service-provider"
+    },
+    {
+      "label": "ERGO Group financials",
+      "url": "https://www.ergo.com/en/company/about-ergo/facts-and-figures"
+    },
+    {
+      "label": "ERGO App",
+      "url": "https://www.ergo.de/de/Service/ergo-app"
+    },
+    {
+      "label": "Customer portal",
+      "url": "https://www.ergo.de/de/Service/kundenportal"
+    },
+    {
+      "label": "CamCom rollout and HDFC ERGO relationship",
+      "url": "https://www.ergo.com/en/newsroom/media-information/2025/20250730-ergo-camcom-ki-basierte-loesung-visuelle-inspektion"
+    }
+  ],
+  "themes": [
+    {
+      "title": "Long waits after submission",
+      "description": "Reviewers described sending claims or invoices and waiting weeks for a meaningful update. Track time to first useful status update and time to resolution."
+    },
+    {
+      "title": "Repeat document requests",
+      "description": "Some customers were asked again for evidence they said they had supplied. Check whether receipt and document status are visible after the handoff to claims operations."
+    },
+    {
+      "title": "Unclear partial payments",
+      "description": "Reviewers reported partial reimbursements with little explanation. Check whether the decision explains which items were covered and why."
+    }
+  ],
+  "coverage": "The 23 self-reported accounts cover German ERGO Group products and services. They establish reported symptoms. Root causes and ownership by the Mumbai team are unknown. iOS and Android listings exposed limited access to dated negative reviews. Powai listings covered the office. Reddit and X searches yielded no additional qualifying accounts. Individual Trustpilot pages were restricted in the research tool, which could read the profile listings. Dates are 2026 posting or update dates unless marked as experience dates.",
+  "employeeCoverage": "Five firsthand accounts include two explicitly tied to ET&S India, one Mumbai engineering account with ambiguous entity attribution, and two from ITERGO in Germany. No Mumbai IT Product Manager account surfaced. Mumbai experiences differed on workload and the office. Several accounts date to 2023.",
+  "ratingSnapshots": [
+    {
+      "label": "ERGO Deutschland on Trustpilot",
+      "url": "https://de.trustpilot.com/review/ergo.de",
+      "rating": "3.8 / 5"
+    },
+    {
+      "label": "ERGO Reiseversicherung on Trustpilot",
+      "url": "https://de.trustpilot.com/review/ergo-reiseversicherung.de",
+      "rating": "4.5 / 5"
+    },
+    {
+      "label": "DKV on Trustpilot",
+      "url": "https://de.trustpilot.com/review/beitragsrechner.dkv.com",
+      "rating": "2.5 / 5"
+    }
+  ],
+  "questions": [
+    {
+      "text": "ERGO runs technology delivery across Mumbai, Germany, and Poland. How do business and technology teams divide roadmap priorities and release sign-off across the hubs?",
+      "why": "Clarifies the product, users, and decision authority.",
+      "source": {
+        "label": "Technology operating model",
+        "url": "https://www.ergo.com/en/company/about-ergo/technology-and-service-provider"
+      }
+    },
+    {
+      "text": "ERGO lets customers upload evidence with claims. Which outcome would be most useful to improve: time to first meaningful update, repeat document requests, or time to resolution?",
+      "why": "Clarifies how the team measures the handoff from digital intake to claims operations.",
+      "source": {
+        "label": "Claims submission workflow",
+        "url": "https://www.ergo.de/de/Service/ereignis-melden/schadenfall-melden"
+      }
+    },
+    {
+      "text": "Where the customer portal routes sensitive documents to specialist teams, what evidence does the PM need before approving a release, and who decides when a security exception is acceptable?",
+      "why": "Clarifies how security, audit evidence, and release decisions work in practice.",
+      "source": {
+        "label": "Portal document routing",
+        "url": "https://www.ergo.de/de/Service/Datenschutz"
+      }
+    }
+  ],
+  "products": [
+    {
+      "name": "ERGO customer portal",
+      "reviews": [
+        {
+          "date": "9 Nov",
+          "rating": 1,
+          "issue": "Activation code still missing after three weeks. Multiple calls went unanswered.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af15867002e922ed3684484"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ERGO dental supplement",
+      "reviews": [
+        {
+          "date": "10 Nov",
+          "rating": 1,
+          "issue": "Requested an email-only quote on 8 Nov and reported repeated sales calls.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af31a0bf3cfe6bb5d076036"
+          }
+        },
+        {
+          "date": "7 Nov",
+          "rating": 1,
+          "issue": "Reported an immediate claim denial after six years of premiums.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6aef401d3b186e1fc6257c7b"
+          }
+        },
+        {
+          "date": "13 Oct",
+          "rating": null,
+          "issue": "Reported partial reimbursement and an unsatisfactory cancellation experience. The author identifies dental cover. The platform category says hospital supplement.",
+          "source": {
+            "label": "Finanztip",
+            "url": "https://www.finanztip.de/erfahrungen/ergo/"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ERGO occupational pension",
+      "reviews": [
+        {
+          "date": "10 Nov",
+          "rating": 1,
+          "issue": "Payout missed two stated dates. Phone support and written correspondence gave conflicting accounts of paperwork completeness.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af3889ea4312acdcad32158"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ERGO life insurance",
+      "reviews": [
+        {
+          "date": "6 Nov",
+          "rating": 1,
+          "issue": "Waited 11 weeks for a payout calculation and payment, with no proactive update.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6aeddad2967b62e9e7fa37d1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ERGO liability insurance",
+      "reviews": [
+        {
+          "date": "10 Nov",
+          "rating": 1,
+          "issue": "Reported a claim in August, then sent several follow-ups without a response.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af34d6e3808e24bfb43aafc"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ERGO trip cancellation",
+      "reviews": [
+        {
+          "date": "17 Nov",
+          "rating": 1,
+          "issue": "Repeated requests for the same evidence and six weeks without reimbursement. Listed experience date 13 Oct.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6afc65614004ae0ada60baff"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ERGO rental-car cover",
+      "reviews": [
+        {
+          "date": "11 Nov",
+          "rating": 1,
+          "issue": "Waited 11 weeks from first submission on 24 Aug. Reported repeat document requests and a partial payment without an itemized explanation.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af4af2a41f647439b84ce09"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ERGO event-ticket cover",
+      "reviews": [
+        {
+          "date": "15 Nov",
+          "rating": 1,
+          "issue": "Concert ticket claim declined after repeat requests for supplied information. Listed experience date 15 Jul.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af98549fba56efa321890cd"
+          }
+        },
+        {
+          "date": "12 Nov",
+          "rating": 2,
+          "issue": "Two of three submitted tickets were reimbursed. Reason unclear to the reviewer. Listed experience date 6 Nov.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af59c699a985e5ebb2a70b6"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ERGO travel claims service · Policy unspecified",
+      "reviews": [
+        {
+          "date": "12 Nov",
+          "rating": 1,
+          "issue": "Support confirmed all documents were present but repeatedly changed the processing estimate.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af5ce7497186bcb7a123c1c"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DKV travel medical cover",
+      "reviews": [
+        {
+          "date": "28 Oct",
+          "rating": 1,
+          "issue": "Said a bank debit revealed a higher premium and the advance notice never arrived.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6ae23533197b41fe3293d7b5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DKV dental supplement",
+      "reviews": [
+        {
+          "date": "21 Oct",
+          "rating": 1,
+          "issue": "First document rejected after 20 days. Resubmitting the original invoice started another 20-day wait.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6ad91361268a47bf83717225"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DKV care support",
+      "reviews": [
+        {
+          "date": "20 Oct · updated",
+          "rating": 1,
+          "issue": "A family member seeking hospice-placement support reported repeated transfers and a disconnected call.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6ad72c56706cba5ef50757ee"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DKV reimbursement and assisted service · Policies unspecified",
+      "reviews": [
+        {
+          "date": "26 Oct",
+          "rating": 1,
+          "issue": "Could not reach a person by phone and received no reply to three emails.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6adf5bab322f9e2b55409cdd"
+          }
+        },
+        {
+          "date": "21 Oct · updated",
+          "rating": 1,
+          "issue": "Reported slow reimbursement, trouble reaching a person, and a callback link that failed.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6ad73067558e344400d06cec"
+          }
+        },
+        {
+          "date": "19 Oct",
+          "rating": 1,
+          "issue": "Reported slow reimbursements, a roughly 40-minute phone queue, and disputed calculations. Experience date 15 Oct.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6ad63a328283f25b8a05879e"
+          }
+        },
+        {
+          "date": "18 Oct",
+          "rating": 1,
+          "issue": "Said previously reimbursed services were partly paid or declined without an explanation.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6ad4ce1fa5798057761fe217"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ERGO Deutschland · Policies unspecified",
+      "reviews": [
+        {
+          "date": "16 Nov",
+          "rating": 1,
+          "issue": "Reported paying costs up front and still awaiting payment after the case closed. Experience date 12 Nov.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6afb373b33f97c2caab940e7"
+          }
+        },
+        {
+          "date": "10 Nov",
+          "rating": 1,
+          "issue": "Reported premium debits continuing for almost two years after cancellation.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af38d3ec012d820e6edd3cc"
+          }
+        },
+        {
+          "date": "10 Nov",
+          "rating": 1,
+          "issue": "Reported long waits for replies through the portal, email, and post. Experience date 14 Sep.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af308e219a009ef05952277"
+          }
+        },
+        {
+          "date": "9 Nov",
+          "rating": 1,
+          "issue": "Reported no progress update after an August inspection and submission of the authorization on 2 Oct.",
+          "source": {
+            "label": "Trustpilot",
+            "url": "https://de.trustpilot.com/reviews/6af10104ef8fe48f17581adb"
+          }
+        }
+      ]
+    }
+  ],
+  "employeeReviews": [
+    {
+      "rating": 5,
+      "role": "Deputy manager · ET&S India, Mumbai",
+      "date": "30 Mar 2023",
+      "positive": "Work-life balance, inclusion, infrastructure, and learning opportunities.",
+      "concern": "",
+      "source": {
+        "label": "Glassdoor",
+        "url": "https://www.glassdoor.com/Reviews/Employee-Review-ERGO-E3155928-RVW75056649.htm"
+      }
+    },
+    {
+      "rating": 4.7,
+      "role": "IT employee · ITERGO, Cologne",
+      "date": "Oct 2026",
+      "positive": "Flexible hours, colleagues, and interesting projects.",
+      "concern": "Ageing office and no fixed desk.",
+      "source": {
+        "label": "Kununu",
+        "url": "https://www.kununu.com/de/ergo-group/kommentare"
+      }
+    },
+    {
+      "rating": 4,
+      "role": "Senior software engineer · Mumbai",
+      "date": "1 Dec 2025",
+      "positive": "Culture, onsite opportunities, and manageable pressure.",
+      "concern": "Strict nine-hour office requirement and laptop restrictions. The review mentions HDFC ERGO, so employer attribution is uncertain.",
+      "source": {
+        "label": "Glassdoor",
+        "url": "https://www.glassdoor.com/Reviews/Employee-Review-ERGO-E3155928-RVW101576179.htm"
+      }
+    },
+    {
+      "rating": 2.8,
+      "role": "Employee · ITERGO, Munich",
+      "date": "Jun 2026",
+      "positive": "Colleagues in some departments and partial remote work.",
+      "concern": "Unclear goals and difficult management interactions.",
+      "source": {
+        "label": "Kununu",
+        "url": "https://www.kununu.com/de/ergo-group/bewertung/9cf6581c-f68b-445c-918e-dba6fdb94460"
+      }
+    },
+    {
+      "rating": 1,
+      "role": "AVP–IT · ET&S India, Mumbai",
+      "date": "29 Nov 2023",
+      "positive": "Strong pay.",
+      "concern": "Management culture and work-life balance.",
+      "source": {
+        "label": "Glassdoor",
+        "url": "https://www.glassdoor.com/Reviews/Employee-Review-ERGO-Group-Germany-E7249-RVW82200959.htm"
+      }
+    }
+  ],
+  "portfolio": {
+    "summary": "Portfolio by major product family as of 19 Nov 2026. ERGO Technology & Services India is the group technology hub in Mumbai. ERGO Group’s insurers and its affiliates own the commercial products.",
+    "entries": [
+      {
+        "name": "Technology and services",
+        "scope": "ERGO Technology & Services India · Mumbai",
+        "sources": [
+          {
+            "label": "ERGO Technology & Services India",
+            "url": "https://www.ergo.com/en/microsite/ergo-technology-services-india"
+          }
+        ],
+        "offering": "Develops and supports software, infrastructure, and digital capabilities across the insurance value chain with the German and Polish hubs.",
+        "users": "ERGO Group business and technology teams. Insurance customers can use the downstream digital channels those teams support."
+      },
+      {
+        "name": "Property, motor, liability and accident",
+        "scope": "ERGO Versicherung · Germany",
+        "sources": [
+          {
+            "label": "ERGO Germany portfolio",
+            "url": "https://www.ergo.com/en/company/about-ergo/companies-germany"
+          }
+        ],
+        "offering": "Protects vehicles, homes, contents, business assets and shipments. Covers specified losses and liability, with personal accident products also available.",
+        "users": "Drivers, households, commercial and industrial buyers, and brokers advising them."
+      },
+      {
+        "name": "Legal protection",
+        "scope": "ERGO Versicherung · Germany and international markets",
+        "sources": [
+          {
+            "label": "ERGO Germany portfolio",
+            "url": "https://www.ergo.com/en/company/about-ergo/companies-germany"
+          },
+          {
+            "label": "ERGO international company directory",
+            "url": "https://www.ergo.com/en/company/about-ergo/international-companies"
+          }
+        ],
+        "offering": "Pays covered legal expenses and provides access to legal advice for eligible disputes.",
+        "users": "Individuals, families and businesses seeking help with legal costs and advice."
+      },
+      {
+        "name": "Life, income protection and retirement",
+        "scope": "ERGO Vorsorge and ERGO life entities · Germany",
+        "sources": [
+          {
+            "label": "ERGO Germany portfolio",
+            "url": "https://www.ergo.com/en/company/about-ergo/companies-germany"
+          }
+        ],
+        "offering": "Term life protects dependants. Disability policies protect income. Annuities, unit-linked policies and occupational pensions support retirement saving and income.",
+        "users": "Individuals and families buy personal policies. Employers arrange occupational pensions for employees."
+      },
+      {
+        "name": "Private health and supplemental cover",
+        "scope": "DKV and ERGO Krankenversicherung · Germany",
+        "sources": [
+          {
+            "label": "ERGO Germany portfolio",
+            "url": "https://www.ergo.com/en/company/about-ergo/companies-germany"
+          }
+        ],
+        "offering": "Offers private medical insurance and supplemental cover for needs such as dental, hospital and long-term care. Policyholders submit bills or benefit claims.",
+        "users": "Individuals eligible for private insurance, families and customers supplementing existing health coverage."
+      },
+      {
+        "name": "Travel and ticket protection",
+        "scope": "ERGO Reiseversicherung · Germany and international markets",
+        "sources": [
+          {
+            "label": "ERGO Germany portfolio",
+            "url": "https://www.ergo.com/en/company/about-ergo/companies-germany"
+          },
+          {
+            "label": "Travel emergency service",
+            "url": "https://www.ergo.com/en/newsroom/media-information/2025/erv-rolls-out-digital-emergency-card"
+          }
+        ],
+        "offering": "Covers specified trip cancellations, medical expenses abroad, assistance and eligible ticket or rental losses depending on the policy.",
+        "users": "Leisure and business travellers and event-ticket buyers. Travel operators and ticketing partners can act as distributors."
+      },
+      {
+        "name": "ERGO App and Meine Versicherungen",
+        "scope": "ERGO Group customer channels · Germany",
+        "sources": [
+          {
+            "label": "ERGO App",
+            "url": "https://www.ergo.de/de/Service/ergo-app"
+          },
+          {
+            "label": "Meine Versicherungen portal",
+            "url": "https://www.ergo.de/de/Service/kundenportal"
+          }
+        ],
+        "offering": "Policy self-service, digital mailbox, quotes, and submission of invoices and claim evidence. Documents can be routed to insurer departments for processing.",
+        "users": "Policyholders use mobile or web self-service. Claims and customer-service teams handle cases behind the scenes."
+      },
+      {
+        "name": "Small-business insurance and embedded distribution",
+        "scope": "ERGO NEXT · United States",
+        "sources": [
+          {
+            "label": "ERGO NEXT product and customer disclosure",
+            "url": "https://www.nextinsurance.com/blog/next-insurance-rebrands-as-ergo-next-insurance/"
+          },
+          {
+            "label": "NEXT Connect partners",
+            "url": "https://www.nextinsurance.com/become-a-partner/"
+          }
+        ],
+        "offering": "Digital quotes and coverage for general and professional liability, workers’ compensation, commercial property, and bundled business-owner policies. NEXT Connect embeds cover in partner platforms.",
+        "users": "Small-business owners, independent operators and their brokers. Payroll, commerce and other platforms distribute embedded cover."
+      },
+      {
+        "name": "General insurance",
+        "scope": "HDFC ERGO · India joint venture",
+        "sources": [
+          {
+            "label": "ERGO international company directory",
+            "url": "https://www.ergo.com/en/company/about-ergo/international-companies"
+          },
+          {
+            "label": "HDFC ERGO policy brochures",
+            "url": "https://www.hdfcergo.com/Download"
+          }
+        ],
+        "offering": "Retail health, motor, travel, home and personal accident cover, plus group products and business cover such as property, marine and liability.",
+        "users": "Individuals, households, motorists, employers and commercial clients."
+      },
+      {
+        "name": "Regional insurance portfolios",
+        "scope": "ERGO International · Europe and Asia",
+        "sources": [
+          {
+            "label": "ERGO international company directory",
+            "url": "https://www.ergo.com/en/company/about-ergo/international-companies"
+          },
+          {
+            "label": "ERGO acquisition announcement",
+            "url": "https://www.ergo.com/en/newsroom/media-information/2026/ergo-completes-acquisition-in-the-baltic-states"
+          }
+        ],
+        "offering": "Local carriers offer products tailored to their markets. Examples include Baltic non-life, Nordic health and travel, and life and health products in other markets. The company directory links the country portfolios.",
+        "users": "Local households and businesses, served through a mix of direct and intermediary channels."
+      }
+    ]
+  },
+  "marketPosition": {
+    "summary": "Figures are labelled by entity and market. Insurance revenue, premium share and adoption are different measures. Plan-level shares were not verified. Check the comparable period and market definition before comparing figures.",
+    "entries": [
+      {
+        "name": "ERGO Group",
+        "scope": "Global · 9M 2026 and FY2025",
+        "sources": [
+          {
+            "label": "Munich Re 9M 2026 results",
+            "url": "https://www.munichre.com/en/company/media-relations/media-information-and-corporate-news/media-information/2026/quarterly-statement-3-2026.html"
+          },
+          {
+            "label": "ERGO FY2025 figures",
+            "url": "https://www.ergo.com/en/company/about-ergo/facts-and-figures"
+          }
+        ],
+        "performance": "€17.36bn insurance revenue in Jan–Sep 2026 versus €16.02bn a year earlier (+8.4%), with €819m net result. Germany contributed €11.78bn and International €5.58bn of revenue. FY2025 group insurance revenue was €21.68bn."
+      },
+      {
+        "name": "German primary insurance",
+        "scope": "Germany · 2025 share of primary-insurance gross premiums",
+        "sources": [
+          {
+            "label": "KIVI and Assekurata 2025 premium-share study",
+            "url": "https://www.assekurata-rating.de/wp-content/uploads/2021/09/Assekurata_Pressemitteilung_23_09_2026_Marktanteilstudie_2025.pdf"
+          },
+          {
+            "label": "Published overall ranking",
+            "url": "https://www.versicherungsbote.de/id/4952077/Die-groessten-Versicherer-Deutschlands-Allianz-baut-Vorsprung-aus/"
+          }
+        ],
+        "share": "ERGO ranked sixth at 5.83%, compared with 5.91% in 2024, in the KIVI and Assekurata ranking. Estimated total market was €255.9bn.",
+        "competitors": "Allianz 18.11%, public-sector insurers 10.19% collectively, R+V 6.69%, Generali 6.03%, and Debeka 5.84%."
+      },
+      {
+        "name": "German property and casualty",
+        "scope": "Germany · 9M 2026 gross insurance revenue",
+        "sources": [
+          {
+            "label": "Munich Re Q3 2026 investor deck",
+            "url": "https://www.munichre.com/content/dam/munichre/mrwebsiteslaunches/2026-q3/MunichRe-Presentation-IR-Q3-2026_EN.pdf/_jcr_content/renditions/original./MunichRe-Presentation-IR-Q3-2026_EN.pdf"
+          },
+          {
+            "label": "KIVI and Assekurata 2025 premium-share study",
+            "url": "https://www.assekurata-rating.de/wp-content/uploads/2021/09/Assekurata_Pressemitteilung_23_09_2026_Marktanteilstudie_2025.pdf"
+          }
+        ],
+        "performance": "€3.58bn versus €3.48bn a year earlier. Product-line figures include fire/property €1.07bn, motor €691m, liability €634m, personal accident €394m, and legal protection €332m.",
+        "share": "ERGO’s individual plan shares were not verified.",
+        "competitors": "Allianz led German property and casualty at 14.44% of 2025 gross premiums. Public-sector insurers had 13.90% collectively. Motor-focused HUK-Coburg had 7.60% of the overall property and casualty segment."
+      },
+      {
+        "name": "German private health",
+        "scope": "Germany · 2025 share of health-insurance gross premiums",
+        "sources": [
+          {
+            "label": "KIVI and Assekurata 2025 premium-share study",
+            "url": "https://www.assekurata-rating.de/wp-content/uploads/2021/09/Assekurata_Pressemitteilung_23_09_2026_Marktanteilstudie_2025.pdf"
+          }
+        ],
+        "share": "ERGO/Munich Re ranked second at 11.92%. The study estimated €54.6bn in German health-insurance gross premiums. The share applies to the combined group in this segment.",
+        "competitors": "Debeka led with 17.70%. Allianz ranked third with 8.53%."
+      },
+      {
+        "name": "German life and retirement",
+        "scope": "Germany · FY2025 insurance revenue and 2025 competitor shares",
+        "sources": [
+          {
+            "label": "ERGO FY2025 figures",
+            "url": "https://www.ergo.com/en/company/about-ergo/facts-and-figures"
+          },
+          {
+            "label": "KIVI and Assekurata 2025 premium-share study",
+            "url": "https://www.assekurata-rating.de/wp-content/uploads/2021/09/Assekurata_Pressemitteilung_23_09_2026_Marktanteilstudie_2025.pdf"
+          }
+        ],
+        "performance": "ERGO reported €10.32bn of combined German life and health insurance revenue, up 2.3%. This is the published combined segment figure.",
+        "share": "A comparable ERGO life-only premium share was not verified.",
+        "competitors": "The German life-insurance premium leaders were Allianz (27.71%), Generali (8.60%) and R+V (8.52%)."
+      },
+      {
+        "name": "Travel insurance and digital channels",
+        "scope": "ERGO Reiseversicherung and ERGO’s German customer channels",
+        "sources": [
+          {
+            "label": "ERV FY2025 solvency report",
+            "url": "https://www.ergo.com/content/dam/ergocom/de/pdf/unternehmen/berichte/sfcr/erv/sfcr-2025-ergo-reiseversicherung.pdf.coredownload.pdf"
+          },
+          {
+            "label": "ERGO claims service and portal reach",
+            "url": "https://www.ergo.de/de/Service/ereignis-melden/schadenfall-melden"
+          },
+          {
+            "label": "HanseMerkur travel cover",
+            "url": "https://www.hansemerkur.de/reiseversicherungspakete/urlaubsreiseversicherung"
+          },
+          {
+            "label": "Allianz Direct travel cover",
+            "url": "https://www.allianzdirect.de/reiseversicherung/"
+          }
+        ],
+        "performance": "ERGO Reiseversicherung AG reported €170.6m in FY2025 net earned premiums, versus €173.1m in FY2024. Separately, ERGO says its customer portal has over 3 million registered customers.",
+        "share": "Travel market share and app or portal active-user share were not verified.",
+        "competitors": "HanseMerkur and Allianz Direct offer overlapping German travel cover. The customer portal is a service channel for policyholders."
+      },
+      {
+        "name": "ERGO NEXT",
+        "scope": "United States · small-business property and casualty",
+        "sources": [
+          {
+            "label": "ERGO NEXT product and customer disclosure",
+            "url": "https://www.nextinsurance.com/blog/next-insurance-rebrands-as-ergo-next-insurance/"
+          },
+          {
+            "label": "Munich Re Q3 2026 investor deck",
+            "url": "https://www.munichre.com/content/dam/munichre/mrwebsiteslaunches/2026-q3/MunichRe-Presentation-IR-Q3-2026_EN.pdf/_jcr_content/renditions/original./MunichRe-Presentation-IR-Q3-2026_EN.pdf"
+          },
+          {
+            "label": "The Hartford small-business products",
+            "url": "https://www.thehartford.com/small-business-insurance"
+          },
+          {
+            "label": "Hiscox business-owner policy",
+            "url": "https://www.hiscox.com/small-business-insurance/business-owners-policy"
+          }
+        ],
+        "performance": "ERGO NEXT reported more than 750,000 entrepreneurs served in Jan 2026. Munich Re reported €541m of US property and casualty gross insurance revenue in ERGO International in Jan–Sep 2026.",
+        "share": "US small-business market share was not verified. The customer figure is company-reported reach.",
+        "competitors": "The Hartford and Hiscox overlap on small-business liability and packaged cover. No directly comparable market-share rank was verified."
+      },
+      {
+        "name": "HDFC ERGO general insurance",
+        "scope": "India joint venture · Apr–Oct 2026 provisional gross direct premiums",
+        "sources": [
+          {
+            "label": "General Insurance Council, October 2026",
+            "url": "https://www.gicouncil.in/Industry%20Statistics/Flash%20Figures/Year_2026/flash-report-october-2026.pdf"
+          }
+        ],
+        "performance": "₹11,010 crore of gross direct premium, up 27.79% year over year.",
+        "share": "5.18% of the Indian non-life industry premium captured in the General Insurance Council table, compared with 4.43% in Apr–Oct 2025.",
+        "competitors": "New India Assurance (12.50%), ICICI Lombard (8.44%), and Tata AIG (6.80%) were larger peers in the same table."
+      },
+      {
+        "name": "ERGO Baltics",
+        "scope": "Lithuania, Latvia and Estonia · post-acquisition 2026",
+        "sources": [
+          {
+            "label": "ERGO acquisition announcement",
+            "url": "https://www.ergo.com/en/newsroom/media-information/2026/ergo-completes-acquisition-in-the-baltic-states"
+          },
+          {
+            "label": "ERGO Baltics CEO interview",
+            "url": "https://www.ergo.com/en/radar-magazine/strategy-and-business/2026/ergo-baltics-digital-insurance-podcast-ursula-deschka"
+          },
+          {
+            "label": "Munich Re Q3 2026 investor deck",
+            "url": "https://www.munichre.com/content/dam/munichre/mrwebsiteslaunches/2026-q3/MunichRe-Presentation-IR-Q3-2026_EN.pdf/_jcr_content/renditions/original./MunichRe-Presentation-IR-Q3-2026_EN.pdf"
+          }
+        ],
+        "performance": "€350m in Baltic property and casualty gross insurance revenue in Jan–Sep 2026 versus €214m a year earlier. The current period includes the acquired business.",
+        "share": "ERGO says the acquisition raised regional share from about 13% to roughly 20% and put it third by premium volume. These are company-reported regional figures."
+      }
+    ]
+  },
+  "capitalActivity": {
+    "summary": "Reviewed public company and parent disclosures over the 24 months to 19 Nov 2026. Munich Re owns ERGO Group. No standalone funding round for ERGO Group or its Mumbai technology hub surfaced in the disclosures reviewed. The material events below are ownership and distribution transactions.",
+    "entries": [
+      {
+        "name": "ERGO Pro and Artemis Group",
+        "scope": "ERGO Germany · Distribution",
+        "sources": [
+          {
+            "label": "ERGO announcement",
+            "url": "https://www.ergo.com/en/newsroom/media-information/2026/20261014-ergo-pro-to-become-part-of-artemis-group"
+          }
+        ],
+        "type": "Takeover agreement and distribution partnership",
+        "status": "Agreement signed",
+        "date": "11 Oct 2026 · announced 14 Oct",
+        "value": "Consideration not verified",
+        "details": "Artemis would be majority owner of the new company. The agreement gives ERGO exclusive product-partner status for life insurance at ONE Financial Services and provides for distribution of other ERGO lines."
+      },
+      {
+        "name": "ADB Gjensidige",
+        "scope": "ERGO International · Baltics",
+        "sources": [
+          {
+            "label": "ERGO acquisition announcement",
+            "url": "https://www.ergo.com/en/newsroom/media-information/2026/ergo-completes-acquisition-in-the-baltic-states"
+          },
+          {
+            "label": "Munich Re 9M 2026 results",
+            "url": "https://www.munichre.com/en/company/media-relations/media-information-and-corporate-news/media-information/2026/quarterly-statement-3-2026.html"
+          }
+        ],
+        "type": "Acquisition",
+        "status": "Closed",
+        "date": "Closing announced 2 Jan 2026",
+        "value": "Consideration not verified",
+        "details": "Added the Lithuanian non-life insurer and its branches in Latvia and Estonia, increasing regional scale."
+      },
+      {
+        "name": "NEXT Insurance",
+        "scope": "Munich Re and ERGO · United States",
+        "sources": [
+          {
+            "label": "ERGO closing announcement",
+            "url": "https://www.ergo.com/en/newsroom/media-information/2025/20250701-ergo-acquisition-next-insurance"
+          },
+          {
+            "label": "Munich Re Ventures investment case study",
+            "url": "https://www.munichre.com/mrv/en/portfolio/next.html"
+          }
+        ],
+        "type": "Acquisition of remaining stake",
+        "status": "Closed",
+        "date": "1 Jul 2025",
+        "value": "US$2.6bn overall deal valuation reported by Munich Re Ventures",
+        "details": "The group took full ownership after acquiring approximately 71% of voting shares. NEXT later rebranded as ERGO NEXT. The valuation reflects the transaction, rather than funds raised by the Mumbai hub."
+      }
+    ]
+  }
+}
+</script>
+<script>
+function element(tag, text, className) {
+  const node = document.createElement(tag);
+  if (text) node.textContent = text;
+  if (className) node.className = className;
+  return node;
+}
+function tableFor(id, label, headings) {
+  const wrap = element('div', '', 'review-table-wrap');
+  const table = element('table', '', 'review-table');
+  table.setAttribute('aria-label', label);
+  const header = table.createTHead().insertRow();
+  for (const heading of headings) {
+    const cell = element('th', heading);
+    cell.scope = 'col';
+    header.append(cell);
+  }
+  wrap.append(table);
+  document.querySelector(id).append(wrap);
+  return table;
+}
+function ratingGroup(table, label, count, columns) {
+  const body = table.createTBody();
+  const row = body.insertRow();
+  row.className = 'rating-row';
+  const heading = element('th', label + ' · ' + count + (count === 1 ? ' review' : ' reviews'));
+  heading.scope = 'rowgroup';
+  heading.colSpan = columns;
+  row.append(heading);
+  return body;
+}
+function addReviewRow(group, values) {
+  const row = group.insertRow();
+  for (const value of values) row.insertCell().append(value);
+}
+function link(url, label) {
+  try {
+    const parsed = new URL(url);
+    if (['http:', 'https:'].includes(parsed.protocol)) {
+      const a = element('a', label);
+      a.href = parsed.href;
+      return a;
+    }
+  } catch {}
+  return element('span', label);
+}
+function byId(id) { return document.getElementById(id); }
+function reviewRatings(rows, direction) {
+  const ratings = [...new Set(rows.map(row => row.rating).filter(Number.isFinite))];
+  return [...ratings.sort((a, b) => direction * (a - b)), null];
+}
+function renderGroups(table, rows, ratings, columns, cells) {
+  for (const rating of ratings) {
+    const entries = rows.filter(row => (row.rating ?? null) === rating);
+    if (entries.length === 0) continue;
+    const group = ratingGroup(table, rating === null ? 'Rating unavailable' : rating + ' / 5', entries.length, columns);
+    for (const row of entries) addReviewRow(group, cells(row));
+  }
+}
+function renderProfile(id, profile, fields) {
+  if (!profile?.summary && !profile?.entries?.length) return;
+  const section = byId(id);
+  section.hidden = false;
+  document.querySelector('a[href="#' + id + '"]').hidden = false;
+  if (profile.summary) section.append(element('p', profile.summary, 'muted'));
+  if (!profile.entries?.length) return;
+  const list = element('div', '', 'profile-list');
+  for (const entry of profile.entries) {
+    const card = element('article', '', 'profile-card');
+    card.append(element('h3', entry.name));
+    if (entry.scope) card.append(element('p', entry.scope, 'muted'));
+    const details = element('dl');
+    for (const [key, label] of fields) {
+      if (entry[key]) details.append(element('dt', label), element('dd', entry[key]));
+    }
+    card.append(details);
+    if (entry.sources?.length) {
+      const sources = element('div', '', 'nav');
+      for (const source of entry.sources) sources.append(link(source.url, source.label));
+      card.append(sources);
+    }
+    list.append(card);
+  }
+  section.append(list);
+}
+function renderReport(report) {
+  document.title = report.company + ' · Interview brief';
+  for (const [id, text] of Object.entries({
+    company: report.company, role: report.role, meeting: report.meeting,
+    coverage: report.coverage, 'staff-coverage': report.employeeCoverage,
+  })) byId(id).textContent = text;
+  for (const paragraph of [report.roleContext].flat()) {
+    byId('role-context').append(element('p', paragraph));
+  }
+  renderProfile('portfolio', report.portfolio, [
+    ['offering', 'What it does'], ['users', 'Who buys or uses it'],
+  ]);
+  renderProfile('market', report.marketPosition, [
+    ['performance', 'Performance'], ['share', 'Market share'], ['competitors', 'Competitors'],
+  ]);
+  renderProfile('capital', report.capitalActivity, [
+    ['type', 'Transaction type'], ['status', 'Status'], ['date', 'Date'],
+    ['value', 'Value'], ['details', 'What changed'],
+  ]);
+  const reviewCount = report.products.reduce((total, product) => total + product.reviews.length, 0);
+  byId('summary').textContent = reviewCount + ' customer accounts · ' + report.lookbackDays + ' days';
+  byId('review-summary').textContent = 'View all ' + reviewCount + ' customer accounts';
+  byId('review-details').hidden = reviewCount === 0;
+  for (const theme of report.themes) {
+    const card = element('div', '', 'tile');
+    card.append(element('h3', theme.title), element('p', theme.description));
+    byId('themes').append(card);
+  }
+  for (const product of report.products) {
+    byId('reviews').append(element('h3', product.name));
+    if (!product.reviews.length) {
+      byId('reviews').append(element('p', 'No dated reviews available.'));
+      continue;
+    }
+    const table = tableFor('#reviews', product.name + ' customer reviews by rating', ['Date', 'Reported issue', 'Source']);
+    renderGroups(table, product.reviews, reviewRatings(product.reviews, 1), 3, row => [
+      row.date, element('span', row.issue, 'feedback'), link(row.source.url, row.source.label),
+    ]);
+  }
+  if (report.ratingSnapshots?.length) {
+    const snapshots = byId('rating-snapshots');
+    snapshots.append(element('h3', 'Rating snapshots'));
+    const list = element('ul');
+    for (const snapshot of report.ratingSnapshots) {
+      const item = element('li');
+      item.append(link(snapshot.url, snapshot.label), ' · ' + snapshot.rating);
+      list.append(item);
+    }
+    snapshots.append(list);
+    snapshots.hidden = false;
+  }
+  report.questions.forEach((question, index) => {
+    const card = element('div', '', 'question');
+    card.append(element('strong', (index + 1) + '. ' + question.text), element('p', question.why, 'muted'));
+    if (question.source) card.append(link(question.source.url, question.source.label));
+    byId('question-list').append(card);
+  });
+  if (!report.questions.length) byId('question-list').append(element('p', 'Product questions will appear here.'));
+  if (report.employeeReviews.length) {
+    const table = tableFor('#staff', 'Employee reviews by rating', ['Role and date', 'What they liked', 'What they flagged', 'Source']);
+    renderGroups(table, report.employeeReviews, reviewRatings(report.employeeReviews, -1), 4, row => [
+      row.role + ' · ' + row.date, row.positive || '—', row.concern || '—', link(row.source.url, row.source.label),
+    ]);
+  } else byId('staff').append(element('p', 'No employee reviews supplied.'));
+  for (const source of report.roleSources) {
+    byId('role-sources').append(link(source.url, source.label));
+  }
+}
+try {
+  const report = JSON.parse(byId('company-report-data').textContent);
+  if (report.version !== 1) throw new Error('Unsupported report format');
+  renderReport(report);
+} catch {
+  byId('report-error').textContent = 'This report could not be opened. Check the embedded report data.';
+  byId('report-error').hidden = false;
+}
+</script></body></html>

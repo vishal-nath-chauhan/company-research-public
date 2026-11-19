@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Company Research Reports</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f6f5f0;color:#202b28;font:16px/1.5 system-ui,sans-serif}
+header{background:#13342c;color:white;padding:44px 22px}
+main,.wrap{max-width:800px;margin:auto}
+main{padding:26px 22px 64px}
+h1{margin:0;font:clamp(36px,7vw,60px)/1.05 Georgia,serif}
+label{display:block;margin-bottom:6px;font-weight:650}
+input{width:100%;padding:12px;border:1px solid #9caea4;border-radius:8px;font:inherit}
+ul{list-style:none;padding:0}
+li{display:flex;justify-content:space-between;align-items:center;gap:12px;background:white;
+padding:14px 18px;margin:8px 0;border:1px solid #dedfd6;border-radius:10px}
+li[hidden]{display:none}
+a{color:#14634f;text-decoration:none}
+a:hover{text-decoration:underline}
+a span{display:block;color:#202b28}
+time{color:#52655e;white-space:nowrap;font-size:14px}
+</style>
+<header><div class="wrap"><h1>Company Research Reports</h1></div></header>
+<main>
+<label for="search">Search by company or role</label>
+<input id="search" type="search">
+<p id="count" role="status">1 reports</p>
+<ul id="reports">
+<li><a href="reports/ergo/it-product-manager/index.html"> <strong>ERGO</strong><span>IT Product Manager</span></a><time>2026-11-19</time></li>
+</ul>
+</main>
+<script>
+const search = document.querySelector('#search');
+const rows = Array.from(document.querySelectorAll('#reports li'));
+const count = document.querySelector('#count');
+function filterReports() {
+  const terms = search.value.trim().toLowerCase().split(/\s+/);
+  let matches = 0;
+  for (const row of rows) {
+    row.hidden = !terms.every(term => row.textContent.toLowerCase().includes(term));
+    if (!row.hidden) matches++;
+  }
+  count.textContent = matches + (matches === 1 ? ' report' : ' reports');
+}
+search.addEventListener('input', filterReports);
+filterReports();
+</script>
+</html>
