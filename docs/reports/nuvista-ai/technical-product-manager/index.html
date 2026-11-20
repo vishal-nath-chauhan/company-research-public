@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en"><head><meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Company interview brief</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f5f0;color:#202b28;font:16px/1.55 system-ui,sans-serif}header{background:#13342c;color:white;padding:32px 22px 44px}main,.wrap{max-width:1060px;margin:auto}main{padding:18px 22px 64px}h1{font:clamp(42px,8vw,72px)/1 Georgia,serif;margin:18px 0 10px}h2{font:34px/1.1 Georgia,serif;margin:0 0 16px}h3,p{margin:0 0 8px}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.13em;text-transform:uppercase;color:#79ccb0}.meta{color:#c8e5d9}.nav{display:flex;flex-wrap:wrap;gap:16px;padding:12px 0}a{color:#14634f}section{margin-top:20px;padding:clamp(18px,4vw,30px);border:1px solid #dedfd6;background:white;border-radius:18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tile{padding:16px;background:#fff2e9;border-radius:12px}.tile h3{color:#813c25}.muted{color:#52655e}.label{display:inline-block;padding:4px 10px;border-radius:20px;background:#deeee6;color:#245344;font-size:13px}.item{padding:12px 0;border-top:1px solid #e3e7e2}.item p{margin:2px 0}.question{background:#ebf4ee;padding:14px 16px;border-radius:10px;margin:10px 0}details{margin:16px 0}#rating-snapshots{margin-top:18px}summary{cursor:pointer;font-weight:700}li{margin:7px 0}small{font-size:13px}.review-list{padding-left:24px}@media(max-width:680px){.grid{grid-template-columns:1fr}h2{font-size:29px}}
+#reviews h3{margin:18px 0 0}.review-table-wrap{margin-top:12px;overflow-x:auto}.review-table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}.review-table th,.review-table td{padding:9px 10px;vertical-align:top;border-bottom:1px solid #e3e7e2}.review-table thead{background:#f4f5f0}.review-table .rating-row th{background:#e7f0ea;color:#245344;font-size:13px}.review-table time,.review-table .source{white-space:nowrap}.review-table .feedback{display:inline-block;min-width:150px}
+.profile-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.profile-card{padding:16px;border:1px solid #e3e7e2;border-radius:12px;overflow-wrap:anywhere}.profile-card h3{line-height:1.3}.profile-card dt{color:#245344;font-weight:700;font-size:14px}.profile-card dd{margin:0 0 12px}.profile-card dl{margin:10px 0 0}.profile-card .nav{gap:6px 12px;padding:5px 0 0;font-size:14px}@media(max-width:680px){.profile-list{grid-template-columns:1fr}}
+</style></head>
+<body><header><div class="wrap"><div class="eyebrow">Company research</div><h1 id="company"></h1><p id="role"></p><p class="meta" id="meeting"></p></div></header>
+<main><nav class="nav" aria-label="On this page"><a href="#context">Role &amp; product</a><a href="#questions">Questions to ask</a><a href="#portfolio" hidden>Product portfolio</a><a href="#market" hidden>Market &amp; competitors</a><a href="#capital" hidden>Funding &amp; ownership</a><a href="#problems">Product problems</a><a href="#employees">Employee feedback</a></nav>
+<p id="report-error" role="alert" hidden></p>
+<section id="context"><h2>Role &amp; product</h2><div id="role-context"></div><div class="nav" id="role-sources"></div></section>
+<section id="questions"><h2>Three questions to ask</h2><div id="question-list"></div></section>
+<section id="portfolio" hidden><h2>Product portfolio</h2></section>
+<section id="market" hidden><h2>Market performance and competitors</h2></section>
+<section id="capital" hidden><h2>Funding and ownership</h2></section>
+<section id="problems"><span class="label" id="summary"></span><h2>Reported product problems</h2><div class="grid" id="themes"></div>
+<details id="review-details"><summary id="review-summary"></summary><div id="reviews"></div></details><p class="muted" id="coverage"></p><div id="rating-snapshots" hidden></div></section>
+<section id="employees"><h2>What employees say</h2><p class="muted" id="staff-coverage"></p><div id="staff"></div></section>
+</main>
+<!-- For an exported report, replace the JSON below with a validated v1 report payload.
+     Serialize JSON with less-than signs escaped as Unicode U+003C.
+     Each new section takes a summary and entries with a name, optional scope,
+     and sources [{label, url}]. Portfolio entries also take offering and users.
+     Market entries take performance, share and competitors. Capital entries
+     take type, status, date, value and details. -->
+<script id="company-report-data" type="application/json">
+{
+  "version": 1,
+  "company": "NuVista AI",
+  "role": "Technical Product Manager",
+  "meeting": "Public company research · 20 November 2026",
+  "roleContext": "NuVista AI is an Atlanta-based AWS modernization and AI delivery firm. AIHouse combines reusable software with expert delivery through AWS Marketplace and direct engagements. A public Technical Product Manager posting describes roadmap-to-backlog translation, coordination across 20–30 engineers and release readiness across QA, UAT, DevOps and customer delivery. The listing describes a remote role and does not specify which products the team owns.",
+  "roleSources": [
+    {
+      "label": "NuVista AI service catalog",
+      "url": "https://nuvista.ai/"
+    },
+    {
+      "label": "NuVista AI leadership and sister company",
+      "url": "https://nuvista.ai/about-us/"
+    },
+    {
+      "label": "Indeed · NuVista AI Technical Product Manager",
+      "url": "https://in.indeed.com/viewjob?jk=2b3350b1241610ac"
+    },
+    {
+      "label": "Glassdoor · 23 September 2026 posting",
+      "url": "https://www.glassdoor.co.in/job-listing/technical-product-manager-tpm-nuvista-ai-JV_KO0,29_KE30,40.htm?jl=1010271977960"
+    },
+    {
+      "label": "Indeed · NuVista AI employer profile",
+      "url": "https://in.indeed.com/cmp/Nuvista-Ai"
+    },
+    {
+      "label": "SimplyHired · employee review coverage",
+      "url": "https://www.simplyhired.co.in/browse-jobs/companies/Nuvista-Ai"
+    },
+    {
+      "label": "NuVista AI · employer-stated culture",
+      "url": "https://nuvista.ai/culture/"
+    },
+    {
+      "label": "NuVista AI · careers and interview stages",
+      "url": "https://nuvista.ai/careers/"
+    }
+  ],
+  "lookbackDays": 120,
+  "coverage": "0 of the 20–25 target negative customer accounts qualified. The 90-day search (22 August–20 November 2026) was extended to 120 days (23 July–20 November). AWS Marketplace, G2, Clutch, GoodFirms, indexed Maps listings and public Reddit/X searches yielded no dated substantive negative account attributable to NuVista AI. No official AIHouse consumer app was found in the India Google Play or App Store searches. Gartner could not be accessed. Public coverage for bespoke client engagements is limited.",
+  "employeeCoverage": "0 of the target 4–8 firsthand employee accounts could be verified. Glassdoor surfaced a job posting and a sign-in prompt. Indeed searches yielded no substantive employee account and SimplyHired showed zero ratings. AmbitionBox was inaccessible. NuVista’s culture and careers pages describe employer policies. Similar-name employers and Crest Infosystems reviews were excluded.",
+  "portfolio": {
+    "summary": "NuVista AI owns and sells AIHouse and provides implementation and operations services. It describes global delivery and plans for North American and Indian expansion, with its headquarters in Atlanta. Buyer and user roles below are inferred from the published workflows. Country-level sales and regional plan availability are undisclosed.",
+    "entries": [
+      {
+        "name": "AIHouse and AI Project Manager",
+        "scope": "NuVista AI · AWS Marketplace SaaS and expert-assisted delivery",
+        "offering": "Structures scoping, milestone tracking, task orchestration and governance. NuVista describes working in customer-controlled AWS environments. Customer teams retain final approval over architecture, security and production cutover. AWS Marketplace lists US$1 per service-consumption unit, with engagement scope and AWS infrastructure costs affecting the overall bill.",
+        "users": "Buyers are CTOs, data leaders and innovation sponsors. NuVista delivery managers and architects operate the workflow alongside customer technical owners, procurement and governance teams.",
+        "sources": [
+          {
+            "label": "AWS Marketplace · AIHouse",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-m3mik7yxztgys"
+          },
+          {
+            "label": "AIHouse operating model and approvals",
+            "url": "https://aihouse.nuvista.ai/faq"
+          },
+          {
+            "label": "NuVista AI pricing and delivery model",
+            "url": "https://nuvista.ai/pricing/"
+          },
+          {
+            "label": "NuVista AI security model",
+            "url": "https://nuvista.ai/security/"
+          }
+        ]
+      },
+      {
+        "name": "Data Platform Modernization and Warehouse Modernization Agent",
+        "scope": "NuVista AI · AWS migration consulting and separately listed agent",
+        "offering": "Assesses dependencies and migrates legacy warehouses such as Teradata, Oracle and SQL Server toward Redshift. The agent assists with discovery, schema and SQL conversion, validation and wave planning, with expert review at key decisions.",
+        "users": "Data platform leaders sponsor migration. Data engineers and DBAs operate it, while analysts and downstream application teams rely on cutover quality.",
+        "sources": [
+          {
+            "label": "AWS Marketplace · Warehouse Modernization Agent",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-wv46bxecgshto"
+          },
+          {
+            "label": "Data Platform Modernization",
+            "url": "https://nuvista.ai/services/data-platform-modernization/"
+          },
+          {
+            "label": "NuVista AI · Sports and entertainment assessment",
+            "url": "https://nuvista.ai/case-studies/sports-entertainment-aws-data-platform-modernization-assessment/"
+          }
+        ]
+      },
+      {
+        "name": "Data-Driven Insights",
+        "scope": "NuVista AI · Analytics and data engineering",
+        "offering": "Builds governed data pipelines, warehouses and business intelligence. At Angel Oak Capital, centralized loan and fund data supported whole-loan and locked-loan dashboards.",
+        "users": "Data and business leaders commission it. Data engineers operate pipelines, while finance, operations and analytics teams use reports and explore the datasets.",
+        "sources": [
+          {
+            "label": "Data-Driven Insights catalog",
+            "url": "https://nuvista.ai/services/data-driven-insights-service/"
+          },
+          {
+            "label": "NuVista AI · Angel Oak Capital",
+            "url": "https://nuvista.ai/case-studies/angel-oak-capital-financial-data-platform-modernization-on-aws/"
+          }
+        ]
+      },
+      {
+        "name": "AI Launch Accelerator, GenAI & GenBI in a Box, and AI-powered solutions",
+        "scope": "NuVista AI · Assessment, prototype and production builds on AWS",
+        "offering": "The Assessment Workshop qualifies a use case and ROI. The Innovation Lab prototypes on customer data. Reusable Bedrock patterns support enterprise search and analytics, document intake, ERP and CRM agents, claims workflows, and other automations tailored to the client.",
+        "users": "Innovation, IT and business-unit leaders fund the work. Platform and AI engineers operate it. Users include analysts, claims staff, content teams and ERP or CRM operators depending on the workflow.",
+        "sources": [
+          {
+            "label": "NuVista AI service catalog",
+            "url": "https://nuvista.ai/"
+          },
+          {
+            "label": "GenAI & GenBI in a Box",
+            "url": "https://nuvista.ai/services/genai-genbi-in-a-box/"
+          },
+          {
+            "label": "AI-powered solutions",
+            "url": "https://nuvista.ai/services/ai-powered-solutions-service/"
+          },
+          {
+            "label": "NuVista AI · Multimodal video discovery",
+            "url": "https://nuvista.ai/case-studies/multimodal-video-discovery/"
+          }
+        ]
+      },
+      {
+        "name": "Cloud Migration and Application Modernization",
+        "scope": "NuVista AI · Modernization services and Marketplace offers",
+        "offering": "Moves workloads such as VMware and Windows to AWS and re-platforms legacy apps. Delivery can include managed infrastructure, APIs, CI/CD and embedded analytics or AI. Published work includes restaurant POS modernization.",
+        "users": "IT and engineering leaders sponsor the work. Cloud engineers, DevOps and application teams operate it. End users depend on the application, such as restaurant managers and staff in the POS example.",
+        "sources": [
+          {
+            "label": "Cloud Migration",
+            "url": "https://nuvista.ai/services/cloud-migration-service/"
+          },
+          {
+            "label": "Application Modernization",
+            "url": "https://nuvista.ai/services/application-modernization-service/"
+          },
+          {
+            "label": "AWS Marketplace · Application Modernization with Data and AI",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-36sev2mkctz72"
+          },
+          {
+            "label": "NuVista AI · Restaurant POS case study",
+            "url": "https://nuvista.ai/case-studies/redefining-restaurant-operations-with-cloud-native-pos/"
+          }
+        ]
+      },
+      {
+        "name": "Data & AIOps and AIHouse AIOps",
+        "scope": "NuVista AI · Ongoing operations service and Marketplace software listing",
+        "offering": "Monitors production cloud, data and AI workloads, surfaces operational signals and helps investigate incidents and optimize cloud spending. NuVista offers engineers on demand.",
+        "users": "Cloud, platform and FinOps leads buy the service. SRE, DevOps and data operations teams use it for monitoring, triage and cost management.",
+        "sources": [
+          {
+            "label": "AWS Marketplace · AIHouse AIOps",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-n37i6uqix63xy"
+          },
+          {
+            "label": "Data & AIOps",
+            "url": "https://nuvista.ai/services/data-aiops/"
+          }
+        ]
+      },
+      {
+        "name": "Crest Infosystems portfolio",
+        "scope": "Sister company · India and US · Hiring team ownership unverified",
+        "offering": "Crest offers custom web and mobile development, ERP, CRM and POS solutions, cloud and DevOps services, data engineering and intelligent automation under its own brand.",
+        "users": "Software and IT leaders at startups, SMEs and enterprises buy these services. Crest engineering and client technical teams implement them, with end users varying by engagement.",
+        "sources": [
+          {
+            "label": "NuVista AI leadership and sister company",
+            "url": "https://nuvista.ai/about-us/"
+          },
+          {
+            "label": "Crest Infosystems service catalog",
+            "url": "https://www.crestinfosystems.com/"
+          }
+        ]
+      }
+    ]
+  },
+  "marketPosition": {
+    "summary": "No verified revenue, ARR, paid customer counts, geography splits or comparable market shares surfaced for NuVista AI or AIHouse. Project counts and case studies are delivery evidence. Competitor comparisons reflect published overlap for North American AWS buyers and carry no market rank.",
+    "entries": [
+      {
+        "name": "AIHouse and consulting on demand",
+        "scope": "NuVista AI · Global delivery, with US Marketplace distribution documented",
+        "performance": "AIHouse launched publicly on AWS Marketplace in May 2025. The pricing page reports 100+ AWS projects delivered across the company, with no reporting period disclosed. It is a project count across service lines.",
+        "share": "AIHouse subscriptions and the addressable AWS consulting-on-demand market denominator are undisclosed.",
+        "competitors": "Clearscale ONE also combines consumption-based access to AWS migration, app modernization, GenAI and ongoing operations for AWS customers.",
+        "sources": [
+          {
+            "label": "AIHouse Marketplace launch release",
+            "url": "https://nuvista.ai/news/nuvista-ai-launches-aihouse-on-aws-marketplace-achieves-aws-qualified-software-status/"
+          },
+          {
+            "label": "AWS Marketplace · AIHouse",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-m3mik7yxztgys"
+          },
+          {
+            "label": "NuVista AI pricing and delivery model",
+            "url": "https://nuvista.ai/pricing/"
+          },
+          {
+            "label": "AWS Marketplace · Clearscale ONE",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-a6rynty5tfwni"
+          }
+        ]
+      },
+      {
+        "name": "Data modernization and BI",
+        "scope": "NuVista AI client engagements · geography and period vary",
+        "performance": "NuVista reports a three-week sports and entertainment assessment spanning 22+ repositories, plus three priority use cases in a three-month Angel Oak Capital engagement. Its US$51,600 figure is stated as estimated project value. Angel Oak’s dashboards were delivered alongside an AI agent proof of concept.",
+        "share": "Segment revenue, paid adoption and comparable share are undisclosed.",
+        "competitors": "Quantiphi’s Qatapult competes for enterprise AWS modernization work. Clearscale ONE also covers AWS database modernization and data engineering.",
+        "sources": [
+          {
+            "label": "NuVista AI · Sports and entertainment assessment",
+            "url": "https://nuvista.ai/case-studies/sports-entertainment-aws-data-platform-modernization-assessment/"
+          },
+          {
+            "label": "NuVista AI · Angel Oak Capital",
+            "url": "https://nuvista.ai/case-studies/angel-oak-capital-financial-data-platform-modernization-on-aws/"
+          },
+          {
+            "label": "AWS Marketplace · Warehouse Modernization Agent",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-wv46bxecgshto"
+          },
+          {
+            "label": "Quantiphi · Qatapult for AWS modernization",
+            "url": "https://quantiphi.com/blog/quantiphis-qatapult-with-tsaas-accelerating-your-cloud-modernization-on-aws-in-the-ai-era"
+          },
+          {
+            "label": "AWS Marketplace · Clearscale ONE",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-a6rynty5tfwni"
+          }
+        ]
+      },
+      {
+        "name": "Generative AI and workflow automation",
+        "scope": "Condé Nast · May 2026 benchmark, reported by AWS",
+        "performance": "A representative video discovery task dropped from 250 to about 2 minutes. AWS reports approximately US$800,000 in estimated annual operational savings. NuVista separately describes its contribution as productionization assets including ingestion, secure APIs, monitoring and deployment patterns. The benchmark reflects the client workflow.",
+        "share": "NuVista’s aggregate AI revenue and deployment counts are undisclosed.",
+        "competitors": "Quantiphi and Mission Cloud offer GenAI implementation for AWS customers, overlapping on pilot-to-production delivery and integration.",
+        "sources": [
+          {
+            "label": "AWS and Condé Nast · Video discovery benchmark",
+            "url": "https://aws.amazon.com/blogs/machine-learning/how-conde-nast-built-multimodal-video-discovery-with-amazon-bedrock/"
+          },
+          {
+            "label": "NuVista AI · Multimodal video discovery",
+            "url": "https://nuvista.ai/case-studies/multimodal-video-discovery/"
+          },
+          {
+            "label": "Quantiphi · AWS collaboration and GenAI services",
+            "url": "https://quantiphi.com/media-releases/quantiphi-amazon-web-services-sign-strategic-collaboration-agreement-to-leverage-generative-ai-capabilities/"
+          },
+          {
+            "label": "Mission Cloud · AWS professional and managed services",
+            "url": "https://www.missioncloud.com/products"
+          }
+        ]
+      },
+      {
+        "name": "Cloud and application modernization",
+        "scope": "NuVista AI · Client-specific delivery",
+        "performance": "The restaurant POS case documents production use for ordering and restaurant operations on AWS. Public material provides no cloud or application modernization revenue or cohort-level commercial adoption.",
+        "share": "No comparable share or verified rank surfaced.",
+        "competitors": "Clearscale ONE overlaps on migration and app re-architecture. Mission Cloud overlaps on cloud migration, DevOps and modernization for AWS customers.",
+        "sources": [
+          {
+            "label": "NuVista AI · Restaurant POS case study",
+            "url": "https://nuvista.ai/case-studies/redefining-restaurant-operations-with-cloud-native-pos/"
+          },
+          {
+            "label": "AWS Marketplace · Clearscale ONE",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-a6rynty5tfwni"
+          },
+          {
+            "label": "Mission Cloud · AWS professional and managed services",
+            "url": "https://www.missioncloud.com/products"
+          }
+        ]
+      },
+      {
+        "name": "Data & AIOps",
+        "scope": "NuVista AI · AWS Marketplace and assisted operations",
+        "performance": "A separate Marketplace offer is visible. NuVista announced it in March 2026. No paid account count, public SLA performance dataset or revenue figure surfaced.",
+        "share": "No comparable share or verified rank surfaced.",
+        "competitors": "Mission Cloud and Clearscale ONE overlap on AWS managed operations, monitoring and cloud cost control.",
+        "sources": [
+          {
+            "label": "AWS Marketplace · AIHouse AIOps",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-n37i6uqix63xy"
+          },
+          {
+            "label": "NuVista AI newsroom",
+            "url": "https://nuvista.ai/news/"
+          },
+          {
+            "label": "Mission Cloud · AWS professional and managed services",
+            "url": "https://www.missioncloud.com/products"
+          },
+          {
+            "label": "AWS Marketplace · Clearscale ONE",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-a6rynty5tfwni"
+          }
+        ]
+      }
+    ]
+  },
+  "capitalActivity": {
+    "summary": "Public search of company news, company profiles and name-matched coverage for 20 November 2024–20 November 2026 found no verifiable NuVista AI equity round, material debt financing, acquisition, divestiture or stake transaction. Private transactions and exact ownership remain unverified.",
+    "entries": [
+      {
+        "name": "Corporate ownership",
+        "scope": "NuVista AI · Atlanta, Georgia",
+        "type": "Ownership disclosure",
+        "status": "Company describes itself as privately held",
+        "details": "Saurabh Naik is identified as founder. NuVista names Crest Infosystems as its sister company. A parent entity, stake split and ownership percentages were not disclosed in the sources reviewed. Bimal Tandel’s May 2025 CEO appointment is a management event.",
+        "sources": [
+          {
+            "label": "NuVista AI leadership and sister company",
+            "url": "https://nuvista.ai/about-us/"
+          },
+          {
+            "label": "NuVista AI company profile",
+            "url": "https://www.linkedin.com/company/nuvista-ai"
+          },
+          {
+            "label": "NuVista AI CEO announcement",
+            "url": "https://nuvista.ai/news/nuvista-ai-appoints-bimal-tandel-as-ceo/"
+          }
+        ]
+      },
+      {
+        "name": "AWS Marketplace and customer incentives",
+        "scope": "AIHouse channel activity",
+        "type": "Commercial distribution and customer incentives",
+        "status": "Publicly announced",
+        "date": "8 May 2025 · AIHouse launch. 26 March 2026 · warehouse modernization agent and AIOps announcement.",
+        "details": "Eligible customers may receive AWS program support and NuVista co-investment toward an engagement. The pricing material describes customer procurement and delivery support. No financing amount, instrument or investor in NuVista was disclosed in these announcements.",
+        "sources": [
+          {
+            "label": "AIHouse Marketplace launch release",
+            "url": "https://nuvista.ai/news/nuvista-ai-launches-aihouse-on-aws-marketplace-achieves-aws-qualified-software-status/"
+          },
+          {
+            "label": "NuVista AI newsroom",
+            "url": "https://nuvista.ai/news/"
+          },
+          {
+            "label": "AWS Marketplace · Warehouse Modernization Agent",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-wv46bxecgshto"
+          },
+          {
+            "label": "AWS Marketplace · AIHouse AIOps",
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-n37i6uqix63xy"
+          },
+          {
+            "label": "NuVista AI pricing and delivery model",
+            "url": "https://nuvista.ai/pricing/"
+          }
+        ]
+      }
+    ]
+  },
+  "themes": [
+    {
+      "title": "What the review sample can support",
+      "description": "No recurring negative customer problem can be established from public accounts. Published case studies describe the workflows and pain points below."
+    },
+    {
+      "title": "Fragmented financial reporting",
+      "description": "In NuVista’s Angel Oak case, teams had to consolidate loan and fund data manually before analysis. The project centralized reporting and introduced self-service filtering for authorized users. See the linked case study in Market position."
+    },
+    {
+      "title": "Video discovery required manual review",
+      "description": "Condé Nast describes a metadata search workflow that required editors to scan footage. Its benchmarking linked the bottleneck to search coverage of visual, audio and transcript signals. See the AWS benchmark in Market position."
+    }
+  ],
+  "questions": [
+    {
+      "text": "When an AIHouse delivery team finds a useful capability on a client engagement, who decides whether it becomes part of the shared platform roadmap?",
+      "why": "Clarifies the TPM’s decision rights and how the team balances reusable platform work with client release commitments.",
+      "source": {
+        "label": "AWS Marketplace · AIHouse",
+        "url": "https://aws.amazon.com/marketplace/pp/prodview-m3mik7yxztgys"
+      }
+    },
+    {
+      "text": "On a warehouse migration, what evidence has to be in place before a wave can go live, and which approvals would I coordinate?",
+      "why": "Clarifies cutover criteria, handoffs with QA and customer teams, and how release risks are escalated.",
+      "source": {
+        "label": "AWS Marketplace · Warehouse Modernization Agent",
+        "url": "https://aws.amazon.com/marketplace/pp/prodview-wv46bxecgshto"
+      }
+    },
+    {
+      "text": "During the first 90 days, which post-launch AIOps metric would you want this role to improve, and how do you measure it today?",
+      "why": "Clarifies the first operational outcome and how production feedback informs the next sprint.",
+      "source": {
+        "label": "AWS Marketplace · AIHouse AIOps",
+        "url": "https://aws.amazon.com/marketplace/pp/prodview-n37i6uqix63xy"
+      }
+    }
+  ],
+  "products": [
+    {
+      "name": "AIHouse core platform",
+      "reviews": []
+    },
+    {
+      "name": "Warehouse Modernization Agent",
+      "reviews": []
+    },
+    {
+      "name": "AIHouse AIOps",
+      "reviews": []
+    },
+    {
+      "name": "Assisted services and client implementations",
+      "reviews": []
+    },
+    {
+      "name": "Company-level feedback",
+      "reviews": []
+    }
+  ],
+  "employeeReviews": [],
+  "ratingSnapshots": [
+    {
+      "label": "AWS Marketplace · AIHouse",
+      "url": "https://aws.amazon.com/marketplace/pp/prodview-m3mik7yxztgys",
+      "rating": "5/5 from one verified AWS customer rating. Review posted 2 May 2025 and outside both windows. The reviewer praised delivery reliability."
+    },
+    {
+      "label": "AWS Marketplace · Warehouse Modernization Agent",
+      "url": "https://aws.amazon.com/marketplace/pp/prodview-wv46bxecgshto",
+      "rating": "0 ratings and 0 reviews visible"
+    },
+    {
+      "label": "AWS Marketplace · AIHouse AIOps",
+      "url": "https://aws.amazon.com/marketplace/pp/prodview-n37i6uqix63xy",
+      "rating": "0 ratings and 0 reviews visible"
+    },
+    {
+      "label": "G2 · NuVista AI",
+      "url": "https://www.g2.com/sellers/nuvista-ai",
+      "rating": "0 reviews visible for NuVista AI consulting"
+    }
+  ]
+}
+</script>
+<script>
+function element(tag, text, className) {
+  const node = document.createElement(tag);
+  if (text) node.textContent = text;
+  if (className) node.className = className;
+  return node;
+}
+function tableFor(id, label, headings) {
+  const wrap = element('div', '', 'review-table-wrap');
+  const table = element('table', '', 'review-table');
+  table.setAttribute('aria-label', label);
+  const header = table.createTHead().insertRow();
+  for (const heading of headings) {
+    const cell = element('th', heading);
+    cell.scope = 'col';
+    header.append(cell);
+  }
+  wrap.append(table);
+  document.querySelector(id).append(wrap);
+  return table;
+}
+function ratingGroup(table, label, count, columns) {
+  const body = table.createTBody();
+  const row = body.insertRow();
+  row.className = 'rating-row';
+  const heading = element('th', label + ' · ' + count + (count === 1 ? ' review' : ' reviews'));
+  heading.scope = 'rowgroup';
+  heading.colSpan = columns;
+  row.append(heading);
+  return body;
+}
+function addReviewRow(group, values) {
+  const row = group.insertRow();
+  for (const value of values) row.insertCell().append(value);
+}
+function link(url, label) {
+  try {
+    const parsed = new URL(url);
+    if (['http:', 'https:'].includes(parsed.protocol)) {
+      const a = element('a', label);
+      a.href = parsed.href;
+      return a;
+    }
+  } catch {}
+  return element('span', label);
+}
+function byId(id) { return document.getElementById(id); }
+function reviewRatings(rows, direction) {
+  const ratings = [...new Set(rows.map(row => row.rating).filter(Number.isFinite))];
+  return [...ratings.sort((a, b) => direction * (a - b)), null];
+}
+function renderGroups(table, rows, ratings, columns, cells) {
+  for (const rating of ratings) {
+    const entries = rows.filter(row => (row.rating ?? null) === rating);
+    if (entries.length === 0) continue;
+    const group = ratingGroup(table, rating === null ? 'Rating unavailable' : rating + ' / 5', entries.length, columns);
+    for (const row of entries) addReviewRow(group, cells(row));
+  }
+}
+function renderProfile(id, profile, fields) {
+  if (!profile?.summary && !profile?.entries?.length) return;
+  const section = byId(id);
+  section.hidden = false;
+  document.querySelector('a[href="#' + id + '"]').hidden = false;
+  if (profile.summary) section.append(element('p', profile.summary, 'muted'));
+  if (!profile.entries?.length) return;
+  const list = element('div', '', 'profile-list');
+  for (const entry of profile.entries) {
+    const card = element('article', '', 'profile-card');
+    card.append(element('h3', entry.name));
+    if (entry.scope) card.append(element('p', entry.scope, 'muted'));
+    const details = element('dl');
+    for (const [key, label] of fields) {
+      if (entry[key]) details.append(element('dt', label), element('dd', entry[key]));
+    }
+    card.append(details);
+    if (entry.sources?.length) {
+      const sources = element('div', '', 'nav');
+      for (const source of entry.sources) sources.append(link(source.url, source.label));
+      card.append(sources);
+    }
+    list.append(card);
+  }
+  section.append(list);
+}
+function renderReport(report) {
+  document.title = report.company + ' · Company research';
+  for (const [id, text] of Object.entries({
+    company: report.company, role: report.role, meeting: report.meeting,
+    coverage: report.coverage, 'staff-coverage': report.employeeCoverage,
+  })) byId(id).textContent = text;
+  for (const paragraph of [report.roleContext].flat()) {
+    byId('role-context').append(element('p', paragraph));
+  }
+  renderProfile('portfolio', report.portfolio, [
+    ['offering', 'What it does'], ['users', 'Who buys or uses it'],
+  ]);
+  renderProfile('market', report.marketPosition, [
+    ['performance', 'Performance'], ['share', 'Market share'], ['competitors', 'Competitors'],
+  ]);
+  renderProfile('capital', report.capitalActivity, [
+    ['type', 'Transaction type'], ['status', 'Status'], ['date', 'Date'],
+    ['value', 'Value'], ['details', 'What changed'],
+  ]);
+  const reviewCount = report.products.reduce((total, product) => total + product.reviews.length, 0);
+  byId('summary').textContent = reviewCount + ' customer accounts · ' + report.lookbackDays + ' days';
+  byId('review-summary').textContent = reviewCount ? 'View all ' + reviewCount + ' customer accounts' : 'Review coverage by offering';
+  byId('review-details').hidden = report.products.length === 0;
+  for (const theme of report.themes) {
+    const card = element('div', '', 'tile');
+    card.append(element('h3', theme.title), element('p', theme.description));
+    byId('themes').append(card);
+  }
+  for (const product of report.products) {
+    byId('reviews').append(element('h3', product.name));
+    if (!product.reviews.length) {
+      byId('reviews').append(element('p', 'No qualifying negative accounts found in the search window.'));
+      continue;
+    }
+    const table = tableFor('#reviews', product.name + ' customer reviews by rating', ['Date', 'Reported issue', 'Source']);
+    renderGroups(table, product.reviews, reviewRatings(product.reviews, 1), 3, row => [
+      row.date, element('span', row.issue, 'feedback'), link(row.source.url, row.source.label),
+    ]);
+  }
+  if (report.ratingSnapshots?.length) {
+    const snapshots = byId('rating-snapshots');
+    snapshots.append(element('h3', 'Rating snapshots'));
+    const list = element('ul');
+    for (const snapshot of report.ratingSnapshots) {
+      const item = element('li');
+      item.append(link(snapshot.url, snapshot.label), ' · ' + snapshot.rating);
+      list.append(item);
+    }
+    snapshots.append(list);
+    snapshots.hidden = false;
+  }
+  report.questions.forEach((question, index) => {
+    const card = element('div', '', 'question');
+    card.append(element('strong', (index + 1) + '. ' + question.text), element('p', question.why, 'muted'));
+    if (question.source) card.append(link(question.source.url, question.source.label));
+    byId('question-list').append(card);
+  });
+  if (!report.questions.length) byId('question-list').append(element('p', 'Product questions will appear here.'));
+  if (report.employeeReviews.length) {
+    const table = tableFor('#staff', 'Employee reviews by rating', ['Role and date', 'What they liked', 'What they flagged', 'Source']);
+    renderGroups(table, report.employeeReviews, reviewRatings(report.employeeReviews, -1), 4, row => [
+      row.role + ' · ' + row.date, row.positive || '—', row.concern || '—', link(row.source.url, row.source.label),
+    ]);
+  } else byId('staff').append(element('p', 'No firsthand employee accounts verified.'));
+  for (const source of report.roleSources) {
+    byId('role-sources').append(link(source.url, source.label));
+  }
+}
+try {
+  const report = JSON.parse(byId('company-report-data').textContent);
+  if (report.version !== 1) throw new Error('Unsupported report format');
+  renderReport(report);
+} catch {
+  byId('report-error').textContent = 'This report could not be opened. Check the embedded report data.';
+  byId('report-error').hidden = false;
+}
+</script></body></html>

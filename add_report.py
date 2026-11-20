@@ -13,6 +13,7 @@ import unicodedata
 ROOT = Path(__file__).resolve().parent
 DOCS = ROOT / "docs"
 CATALOG = ROOT / "catalog.json"
+NOINDEX = '<meta name="robots" content="noindex">'
 KEY = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9]+(?:-[a-z0-9]+)*")
 
 
@@ -52,6 +53,7 @@ def index_html(entries):
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{NOINDEX}
 <title>Company Research Reports</title>
 <style>
 *{{box-sizing:border-box}}
@@ -135,6 +137,13 @@ def main():
         for field in ("company", "role")
     ):
         parser.error("Expected a populated v1 interview brief")
+
+    if NOINDEX not in html:
+        html, inserted = re.subn(
+            r"<head\b[^>]*>", lambda match: match[0] + NOINDEX, html, count=1, flags=re.I
+        )
+        if not inserted:
+            parser.error("Expected an HTML head for the noindex directive")
 
     catalog[key] = dict(company=args.company, role=args.role, updated=args.date.isoformat())
     page = Path("reports") / key / "index.html"
