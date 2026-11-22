@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en"><head><meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Company interview brief</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f5f0;color:#202b28;font:16px/1.55 system-ui,sans-serif}header{background:#13342c;color:white;padding:32px 22px 44px}main,.wrap{max-width:1060px;margin:auto}main{padding:18px 22px 64px}h1{font:clamp(42px,8vw,72px)/1 Georgia,serif;margin:18px 0 10px}h2{font:34px/1.1 Georgia,serif;margin:0 0 16px}h3,p{margin:0 0 8px}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.13em;text-transform:uppercase;color:#79ccb0}.meta{color:#c8e5d9}.nav{display:flex;flex-wrap:wrap;gap:16px;padding:12px 0}a{color:#14634f}section{margin-top:20px;padding:clamp(18px,4vw,30px);border:1px solid #dedfd6;background:white;border-radius:18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tile{padding:16px;background:#fff2e9;border-radius:12px}.tile h3{color:#813c25}.muted{color:#52655e}.label{display:inline-block;padding:4px 10px;border-radius:20px;background:#deeee6;color:#245344;font-size:13px}.item{padding:12px 0;border-top:1px solid #e3e7e2}.item p{margin:2px 0}.question{background:#ebf4ee;padding:14px 16px;border-radius:10px;margin:10px 0}details{margin:16px 0}#rating-snapshots{margin-top:18px}summary{cursor:pointer;font-weight:700}li{margin:7px 0}small{font-size:13px}.review-list{padding-left:24px}@media(max-width:680px){.grid{grid-template-columns:1fr}h2{font-size:29px}}
+#reviews h3{margin:18px 0 0}.review-table-wrap{margin-top:12px;overflow-x:auto}.review-table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}.review-table th,.review-table td{padding:9px 10px;vertical-align:top;border-bottom:1px solid #e3e7e2}.review-table thead{background:#f4f5f0}.review-table .rating-row th{background:#e7f0ea;color:#245344;font-size:13px}.review-table time,.review-table .source{white-space:nowrap}.review-table .feedback{display:inline-block;min-width:150px}
+.profile-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.profile-card{padding:16px;border:1px solid #e3e7e2;border-radius:12px;overflow-wrap:anywhere}.profile-card h3{line-height:1.3}.profile-card dt{color:#245344;font-weight:700;font-size:14px}.profile-card dd{margin:0 0 12px}.profile-card dl{margin:10px 0 0}.profile-card .nav{gap:6px 12px;padding:5px 0 0;font-size:14px}@media(max-width:680px){.profile-list{grid-template-columns:1fr}}
+</style></head>
+<body><header><div class="wrap"><div class="eyebrow">Interview brief</div><h1 id="company"></h1><p id="role"></p><p class="meta" id="meeting"></p></div></header>
+<main><nav class="nav" aria-label="On this page"><a href="#context">Role &amp; product</a><a href="#questions">Questions to ask</a><a href="#portfolio" hidden>Product portfolio</a><a href="#market" hidden>Market &amp; competitors</a><a href="#capital" hidden>Funding &amp; ownership</a><a href="#problems">Product problems</a><a href="#employees">Employee feedback</a></nav>
+<p id="report-error" role="alert" hidden></p>
+<section id="context"><h2>Role &amp; product</h2><div id="role-context"></div><div class="nav" id="role-sources"></div></section>
+<section id="questions"><h2>Three questions to ask</h2><div id="question-list"></div></section>
+<section id="portfolio" hidden><h2>Product portfolio</h2></section>
+<section id="market" hidden><h2>Market performance and competitors</h2></section>
+<section id="capital" hidden><h2>Funding and ownership</h2></section>
+<section id="problems"><span class="label" id="summary"></span><h2>Reported product problems</h2><div class="grid" id="themes"></div>
+<details id="review-details"><summary id="review-summary"></summary><div id="reviews"></div></details><p class="muted" id="coverage"></p><div id="rating-snapshots" hidden></div></section>
+<section id="employees"><h2>What employees say</h2><p class="muted" id="staff-coverage"></p><div id="staff"></div></section>
+</main>
+<!-- For an exported report, replace the JSON below with a validated v1 report payload.
+     Serialize JSON with less-than signs escaped as Unicode U+003C.
+     Each new section takes a summary and entries with a name, optional scope,
+     and sources [{label, url}]. Portfolio entries also take offering and users.
+     Market entries take performance, share and competitors. Capital entries
+     take type, status, date, value and details. -->
+<script id="company-report-data" type="application/json">
+{
+  "version": 1,
+  "company": "ZenTrades",
+  "role": "Founding Product Manager · Senior IC",
+  "meeting": "Public company research · 22 November 2026",
+  "lookbackDays": 120,
+  "roleContext": [
+    "ZenTrades Inc. is a private field-service software company founded in 2022. The official site lists New York as its US headquarters (236 W 27th St, Floor 12) and Pune at A-302, Nyati Tech Park, Kalyani Nagar. The official site does not publish a complete office-function map.",
+    "Its modular platform serves HVAC, plumbing, electrical, fire and life safety, water, kitchen exhaust and elevator businesses. Core workflows cover customer/job records, scheduling, dispatch, field work, inspections, estimates, invoicing, payments, inventory and job costing. ZenFire adds fire-inspection workflows; LISA is described as an AI assistant.",
+    "A public Pune-based Founding Product Manager posting describes customer discovery with US and Canadian customers, end-to-end product ownership, 0→1/1→10 delivery, and a US shift. Pay and candidate-specific preparation are intentionally omitted from this public research export.",
+    "Headcount is uncertain: LinkedIn reports 64 associated members and an 11–50 employee band; PitchBook lists 47; Wellfound gives 51–200. LinkedIn function counts include 3 Product Management, 9 Engineering and 8 Information Technology members; these are profile counts, not a verified org chart.",
+    "Founder and CEO Arnav Anand is associated with ZenTrades since 2022 in public profiles. Public bios identify prior field-service software experience at SmartServ and a mechanical-engineering degree plus an engineering master's. No CTO profile was reliably verified."
+  ],
+  "roleSources": [
+    {
+      "label": "Official ZenTrades site and product overview",
+      "url": "https://zentrades.pro/"
+    },
+    {
+      "label": "Official About Us",
+      "url": "https://zentrades.pro/about-us"
+    },
+    {
+      "label": "Official Pricing",
+      "url": "https://zentrades.pro/pricing"
+    },
+    {
+      "label": "Official ZenFire",
+      "url": "https://zentrades.pro/zenfire"
+    },
+    {
+      "label": "Official ZenFire contact and locations",
+      "url": "https://zentrades.pro/zenfire/contact-us"
+    },
+    {
+      "label": "LinkedIn company People page",
+      "url": "https://www.linkedin.com/company/zentrades-ai/people/"
+    },
+    {
+      "label": "PitchBook company and funding profile",
+      "url": "https://pitchbook.com/profiles/company/528377-59"
+    },
+    {
+      "label": "Dealroom company profile",
+      "url": "https://app.dealroom.co/companies/zentrades"
+    },
+    {
+      "label": "Crunchbase company profile",
+      "url": "https://www.crunchbase.com/organization/zentrades"
+    },
+    {
+      "label": "Wellfound company profile",
+      "url": "https://wellfound.com/company/zentrades-3"
+    },
+    {
+      "label": "Arnav Anand founder profile",
+      "url": "https://www.crunchbase.com/person/arnav-anand"
+    }
+  ],
+  "portfolio": {
+    "summary": "Trade-specific field-service SaaS with a shared CRM/ERP-style base and optional workflows.",
+    "entries": [
+      {
+        "name": "ZenTrades platform",
+        "sources": [
+          {
+            "label": "Official product overview",
+            "url": "https://zentrades.pro/"
+          }
+        ],
+        "offering": "Customer and job records, schedule/dispatch, crew and inventory management, recurring inspections, job costing, estimates, invoices and online payments; technician mobile app includes offline support.",
+        "users": "Purchased by trade-service businesses; used by owners, dispatchers, office staff, technicians and inspectors."
+      },
+      {
+        "name": "ZenFire and LISA",
+        "sources": [
+          {
+            "label": "Official ZenFire",
+            "url": "https://zentrades.pro/zenfire"
+          }
+        ],
+        "offering": "Fire inspection, recurring compliance checklists, equipment records and deficiency-to-estimate workflows. LISA is described as an AI/ML assistant offering hands-free use, nudges and recommendations.",
+        "users": "Fire-protection and life-safety contractors, inspectors, field technicians and office teams."
+      },
+      {
+        "name": "Trade-specific modules",
+        "sources": [
+          {
+            "label": "Official industry pages",
+            "url": "https://zentrades.pro/"
+          }
+        ],
+        "offering": "Modules and workflows for HVAC, electrical, plumbing, water, kitchen exhaust and elevator service.",
+        "users": "Trade-service operators and their office and field teams."
+      }
+    ]
+  },
+  "marketPosition": {
+    "summary": "Trade-specific field-service management with modular workflows across regulated and non-regulated trade verticals.",
+    "entries": [
+      {
+        "name": "Positioning and alternatives",
+        "sources": [
+          {
+            "label": "Official ZenTrades site",
+            "url": "https://zentrades.pro/"
+          },
+          {
+            "label": "Official ZenTrades About Us",
+            "url": "https://zentrades.pro/about-us"
+          }
+        ],
+        "performance": "The platform connects dispatch, field work, inspections, estimates, invoicing and payment. The official site claims more than 10,000 field teams; this is not independently verified.",
+        "share": "Not found in public sources reviewed.",
+        "competitors": "ServiceTitan, Jobber, Housecall Pro and FieldPulse are identified in public company materials and industry databases. ZenTrades emphasizes modular trade-specific workflows and compliance depth."
+      }
+    ]
+  },
+  "capitalActivity": {
+    "summary": "Private and venture-backed according to funding databases; round details conflict.",
+    "entries": [
+      {
+        "name": "Reported pre-seed / seed financing",
+        "sources": [
+          {
+            "label": "PitchBook",
+            "url": "https://pitchbook.com/profiles/company/528377-59"
+          },
+          {
+            "label": "Dealroom",
+            "url": "https://app.dealroom.co/companies/zentrades"
+          },
+          {
+            "label": "Crunchbase",
+            "url": "https://www.crunchbase.com/organization/zentrades"
+          },
+          {
+            "label": "Extruct",
+            "url": "https://www.extruct.ai/hub/zentrades-pro-funding/"
+          }
+        ],
+        "type": "Pre-seed / seed records",
+        "status": "Venture-backed; databases disagree on classification and latest round.",
+        "date": "Reported 2023–2024",
+        "value": "No single amount reliably verified",
+        "details": "PitchBook reports an Oct 2023 early-stage VC deal of $1.7M; Dealroom lists a Feb 2024 Seed with amount unavailable; Crunchbase shows two pre-seed records with amounts obscured; Extruct lists May 2023 and Feb 2024 pre-seed entries. These are database-reported records, not company-confirmed details."
+      }
+    ]
+  },
+  "themes": [
+    {
+      "title": "Field-to-office continuity is a positive signal",
+      "description": "One verified G2 owner/operator review praises the link between technician field app and office software, including estimates; the sample is only one review."
+    },
+    {
+      "title": "Inspection and deficiency workflows stand out",
+      "description": "An App Store review praises in-field inspection reports and turning deficiencies into quotes and tickets. This is one positive account, not a broad satisfaction measure."
+    },
+    {
+      "title": "Reliability and implementation concerns appear in negative reviews",
+      "description": "Some App Store accounts report reliability/Android friction; a recent Canada listing review alleges prolonged setup and support problems. Samples are small and represent individual experiences."
+    }
+  ],
+  "questions": [
+    {
+      "text": "Which trade workflow is the current product priority, and what customer evidence would justify expanding into a new vertical?",
+      "why": "Connects the multi-trade portfolio to product investment choices."
+    },
+    {
+      "text": "How does ZenTrades decide which customer-specific requests become reusable platform capabilities?",
+      "why": "Tests how modularity, speed and product coherence are balanced."
+    },
+    {
+      "text": "Which customer outcome does the product organization use to evaluate improvements to onboarding and field adoption?",
+      "why": "Connects product decisions to measurable customer value."
+    }
+  ],
+  "products": [
+    {
+      "name": "ZenTrades mobile app · US App Store",
+      "reviews": [
+        {
+          "date": "2025-05-23",
+          "issue": "5-star reviewer from 603 Fire Alarm praises in-field reports, deficiencies flowing into a quote/ticket, invoicing and support.",
+          "rating": 5,
+          "source": {
+            "label": "Apple App Store · US",
+            "url": "https://apps.apple.com/us/app/zentrades/id1667202612"
+          }
+        },
+        {
+          "date": "2024-02-01",
+          "issue": "1-star reviewer reports recurring issues and Android/mobile workflow problems.",
+          "rating": 1,
+          "source": {
+            "label": "Apple App Store · US",
+            "url": "https://apps.apple.com/us/app/zentrades/id1667202612"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ZenTrades · G2",
+      "reviews": [
+        {
+          "date": "2025-07-14",
+          "issue": "4.5-star verified owner/operator praises continuity between field and office software and estimating; reviewer says onboarding needed hands-on support.",
+          "rating": 4.5,
+          "source": {
+            "label": "G2 · ZenTrades",
+            "url": "https://www.g2.com/products/zentrades-marketing-zentrades/reviews"
+          }
+        }
+      ]
+    }
+  ],
+  "employeeReviews": [
+    {
+      "date": "2025-11-08",
+      "role": "Sales Development Representative · Glassdoor",
+      "positive": "Review notes salary paid on time, incentives and good colleagues.",
+      "concern": "Review says management can micromanage when targets are missed.",
+      "rating": 3,
+      "source": {
+        "label": "Glassdoor · ZenTrades",
+        "url": "https://www.glassdoor.ca/Reviews/ZenTrades-Reviews-E9394674.htm"
+      }
+    },
+    {
+      "date": "2025-05-23",
+      "role": "Customer Success Associate · Glassdoor",
+      "positive": "No substantive positive noted in the visible review.",
+      "concern": "Reviewer alleges limited career growth and concerns with performance feedback and management; this is one anonymous account.",
+      "rating": 1,
+      "source": {
+        "label": "Glassdoor · ZenTrades",
+        "url": "https://www.glassdoor.ca/Reviews/ZenTrades-Reviews-E9394674.htm"
+      }
+    },
+    {
+      "date": "2024-04-19",
+      "role": "Software Engineer · Indeed India",
+      "positive": "No substantive positive noted.",
+      "concern": "Single review reports extended hours, stress and limited learning opportunities.",
+      "rating": 2,
+      "source": {
+        "label": "Indeed India · ZenTrades",
+        "url": "https://in.indeed.com/cmp/Zentrades"
+      }
+    }
+  ],
+  "coverage": "Public company and product pages, LinkedIn company counts, company-level employee-review pages, G2 and Apple App Store pages were reviewed on 22 Nov 2026. Review evidence is sparse and mixed; published ratings and individual accounts should not be treated as representative. App-store rating snapshots are listed below. Funding databases disagree; their records are labeled as such.",
+  "employeeCoverage": "Glassdoor page reports 2.9/5 across 30 reviews and 45% recommend; work-life balance and senior management show 2.8/5 each. Indeed India reports 2.0/5 from one review. Examples above are individual anonymous posts; latest visible Glassdoor account was dated 8 Nov 2025.",
+  "ratingSnapshots": [
+    {
+      "label": "Apple App Store · ZenTrades US · 2.8/5, 21 ratings",
+      "rating": "2.8/5 · 21 ratings",
+      "url": "https://apps.apple.com/us/app/zentrades/id1667202612"
+    },
+    {
+      "label": "Apple App Store · ZenTrades Canada · 1.2/5, 5 ratings",
+      "rating": "1.2/5 · 5 ratings",
+      "url": "https://apps.apple.com/ca/app/zentrades/id1667202612"
+    },
+    {
+      "label": "G2 · ZenTrades · 4.5/5, 1 review",
+      "rating": "4.5/5 · 1 review",
+      "url": "https://www.g2.com/products/zentrades-marketing-zentrades/reviews"
+    },
+    {
+      "label": "Glassdoor · ZenTrades · 2.9/5, 30 reviews",
+      "rating": "2.9/5 · 30 reviews",
+      "url": "https://www.glassdoor.ca/Reviews/ZenTrades-Reviews-E9394674.htm"
+    },
+    {
+      "label": "Indeed India · ZenTrades · 2.0/5, 1 review",
+      "rating": "2.0/5 · 1 review",
+      "url": "https://in.indeed.com/cmp/Zentrades"
+    }
+  ]
+}
+</script>
+<script>
+function element(tag, text, className) {
+  const node = document.createElement(tag);
+  if (text) node.textContent = text;
+  if (className) node.className = className;
+  return node;
+}
+function tableFor(id, label, headings) {
+  const wrap = element('div', '', 'review-table-wrap');
+  const table = element('table', '', 'review-table');
+  table.setAttribute('aria-label', label);
+  const header = table.createTHead().insertRow();
+  for (const heading of headings) {
+    const cell = element('th', heading);
+    cell.scope = 'col';
+    header.append(cell);
+  }
+  wrap.append(table);
+  document.querySelector(id).append(wrap);
+  return table;
+}
+function ratingGroup(table, label, count, columns) {
+  const body = table.createTBody();
+  const row = body.insertRow();
+  row.className = 'rating-row';
+  const heading = element('th', label + ' · ' + count + (count === 1 ? ' review' : ' reviews'));
+  heading.scope = 'rowgroup';
+  heading.colSpan = columns;
+  row.append(heading);
+  return body;
+}
+function addReviewRow(group, values) {
+  const row = group.insertRow();
+  for (const value of values) row.insertCell().append(value);
+}
+function link(url, label) {
+  try {
+    const parsed = new URL(url);
+    if (['http:', 'https:'].includes(parsed.protocol)) {
+      const a = element('a', label);
+      a.href = parsed.href;
+      return a;
+    }
+  } catch {}
+  return element('span', label);
+}
+function byId(id) { return document.getElementById(id); }
+function reviewRatings(rows, direction) {
+  const ratings = [...new Set(rows.map(row => row.rating).filter(Number.isFinite))];
+  return [...ratings.sort((a, b) => direction * (a - b)), null];
+}
+function renderGroups(table, rows, ratings, columns, cells) {
+  for (const rating of ratings) {
+    const entries = rows.filter(row => (row.rating ?? null) === rating);
+    if (entries.length === 0) continue;
+    const group = ratingGroup(table, rating === null ? 'Rating unavailable' : rating + ' / 5', entries.length, columns);
+    for (const row of entries) addReviewRow(group, cells(row));
+  }
+}
+function renderProfile(id, profile, fields) {
+  if (!profile?.summary && !profile?.entries?.length) return;
+  const section = byId(id);
+  section.hidden = false;
+  document.querySelector('a[href="#' + id + '"]').hidden = false;
+  if (profile.summary) section.append(element('p', profile.summary, 'muted'));
+  if (!profile.entries?.length) return;
+  const list = element('div', '', 'profile-list');
+  for (const entry of profile.entries) {
+    const card = element('article', '', 'profile-card');
+    card.append(element('h3', entry.name));
+    if (entry.scope) card.append(element('p', entry.scope, 'muted'));
+    const details = element('dl');
+    for (const [key, label] of fields) {
+      if (entry[key]) details.append(element('dt', label), element('dd', entry[key]));
+    }
+    card.append(details);
+    if (entry.sources?.length) {
+      const sources = element('div', '', 'nav');
+      for (const source of entry.sources) sources.append(link(source.url, source.label));
+      card.append(sources);
+    }
+    list.append(card);
+  }
+  section.append(list);
+}
+function renderReport(report) {
+  document.title = report.company + ' · Interview brief';
+  for (const [id, text] of Object.entries({
+    company: report.company, role: report.role, meeting: report.meeting,
+    coverage: report.coverage, 'staff-coverage': report.employeeCoverage,
+  })) byId(id).textContent = text;
+  for (const paragraph of [report.roleContext].flat()) {
+    byId('role-context').append(element('p', paragraph));
+  }
+  renderProfile('portfolio', report.portfolio, [
+    ['offering', 'What it does'], ['users', 'Who buys or uses it'],
+  ]);
+  renderProfile('market', report.marketPosition, [
+    ['performance', 'Performance'], ['share', 'Market share'], ['competitors', 'Competitors'],
+  ]);
+  renderProfile('capital', report.capitalActivity, [
+    ['type', 'Transaction type'], ['status', 'Status'], ['date', 'Date'],
+    ['value', 'Value'], ['details', 'What changed'],
+  ]);
+  const reviewCount = report.products.reduce((total, product) => total + product.reviews.length, 0);
+  byId('summary').textContent = reviewCount + ' customer accounts · ' + report.lookbackDays + ' days';
+  byId('review-summary').textContent = 'View all ' + reviewCount + ' customer accounts';
+  byId('review-details').hidden = reviewCount === 0;
+  for (const theme of report.themes) {
+    const card = element('div', '', 'tile');
+    card.append(element('h3', theme.title), element('p', theme.description));
+    byId('themes').append(card);
+  }
+  for (const product of report.products) {
+    byId('reviews').append(element('h3', product.name));
+    if (!product.reviews.length) {
+      byId('reviews').append(element('p', 'No dated reviews available.'));
+      continue;
+    }
+    const table = tableFor('#reviews', product.name + ' customer reviews by rating', ['Date', 'Reported issue', 'Source']);
+    renderGroups(table, product.reviews, reviewRatings(product.reviews, 1), 3, row => [
+      row.date, element('span', row.issue, 'feedback'), link(row.source.url, row.source.label),
+    ]);
+  }
+  if (report.ratingSnapshots?.length) {
+    const snapshots = byId('rating-snapshots');
+    snapshots.append(element('h3', 'Rating snapshots'));
+    const list = element('ul');
+    for (const snapshot of report.ratingSnapshots) {
+      const item = element('li');
+      item.append(link(snapshot.url, snapshot.label), ' · ' + snapshot.rating);
+      list.append(item);
+    }
+    snapshots.append(list);
+    snapshots.hidden = false;
+  }
+  report.questions.forEach((question, index) => {
+    const card = element('div', '', 'question');
+    card.append(element('strong', (index + 1) + '. ' + question.text), element('p', question.why, 'muted'));
+    if (question.source) card.append(link(question.source.url, question.source.label));
+    byId('question-list').append(card);
+  });
+  if (!report.questions.length) byId('question-list').append(element('p', 'Product questions will appear here.'));
+  if (report.employeeReviews.length) {
+    const table = tableFor('#staff', 'Employee reviews by rating', ['Role and date', 'What they liked', 'What they flagged', 'Source']);
+    renderGroups(table, report.employeeReviews, reviewRatings(report.employeeReviews, -1), 4, row => [
+      row.role + ' · ' + row.date, row.positive || '—', row.concern || '—', link(row.source.url, row.source.label),
+    ]);
+  } else byId('staff').append(element('p', 'No employee reviews supplied.'));
+  for (const source of report.roleSources) {
+    byId('role-sources').append(link(source.url, source.label));
+  }
+}
+try {
+  const report = JSON.parse(byId('company-report-data').textContent);
+  if (report.version !== 1) throw new Error('Unsupported report format');
+  renderReport(report);
+} catch {
+  byId('report-error').textContent = 'This report could not be opened. Check the embedded report data.';
+  byId('report-error').hidden = false;
+}
+</script></body></html>
