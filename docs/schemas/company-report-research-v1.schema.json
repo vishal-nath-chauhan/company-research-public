@@ -1,0 +1,406 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vishal-nath-chauhan.github.io/company-research-public/schemas/company-report-research-v1.schema.json",
+  "title": "Company research report v1 (research-only layout)",
+  "description": "Schema for the JSON inside the company-report-data script in a standalone company research report.",
+  "type": "object",
+  "required": [
+    "version",
+    "company",
+    "role",
+    "meeting",
+    "coverage",
+    "employeeCoverage",
+    "lookbackDays",
+    "roleContext",
+    "roleSources",
+    "themes",
+    "questions",
+    "products",
+    "employeeReviews"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "company": {
+      "$ref": "#/$defs/text"
+    },
+    "role": {
+      "$ref": "#/$defs/text"
+    },
+    "meeting": {
+      "$ref": "#/$defs/text"
+    },
+    "coverage": {
+      "$ref": "#/$defs/text"
+    },
+    "employeeCoverage": {
+      "$ref": "#/$defs/text"
+    },
+    "lookbackDays": {
+      "type": "integer",
+      "enum": [
+        90,
+        120
+      ]
+    },
+    "roleContext": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/text"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          }
+        }
+      ]
+    },
+    "roleSources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "themes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/theme"
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/question"
+      },
+      "maxItems": 3
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/reviewGroup"
+      }
+    },
+    "employeeReviews": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/employeeReview"
+      }
+    },
+    "ratingSnapshots": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ratingSnapshot"
+      }
+    },
+    "portfolio": {
+      "type": "object",
+      "required": [
+        "summary",
+        "entries"
+      ],
+      "properties": {
+        "summary": {
+          "$ref": "#/$defs/text"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "sources",
+              "offering",
+              "users"
+            ],
+            "properties": {
+              "name": {
+                "$ref": "#/$defs/text"
+              },
+              "scope": {
+                "$ref": "#/$defs/text"
+              },
+              "offering": {
+                "$ref": "#/$defs/text"
+              },
+              "users": {
+                "$ref": "#/$defs/text"
+              },
+              "sources": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/source"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "marketPosition": {
+      "type": "object",
+      "required": [
+        "summary",
+        "entries"
+      ],
+      "properties": {
+        "summary": {
+          "$ref": "#/$defs/text"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "sources"
+            ],
+            "properties": {
+              "name": {
+                "$ref": "#/$defs/text"
+              },
+              "scope": {
+                "$ref": "#/$defs/text"
+              },
+              "performance": {
+                "$ref": "#/$defs/text"
+              },
+              "share": {
+                "$ref": "#/$defs/text"
+              },
+              "competitors": {
+                "$ref": "#/$defs/text"
+              },
+              "sources": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/source"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "capitalActivity": {
+      "type": "object",
+      "required": [
+        "summary",
+        "entries"
+      ],
+      "properties": {
+        "summary": {
+          "$ref": "#/$defs/text"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "sources"
+            ],
+            "properties": {
+              "name": {
+                "$ref": "#/$defs/text"
+              },
+              "scope": {
+                "$ref": "#/$defs/text"
+              },
+              "type": {
+                "$ref": "#/$defs/text"
+              },
+              "status": {
+                "$ref": "#/$defs/text"
+              },
+              "date": {
+                "$ref": "#/$defs/text"
+              },
+              "value": {
+                "$ref": "#/$defs/text"
+              },
+              "details": {
+                "$ref": "#/$defs/text"
+              },
+              "sources": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/source"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://[^/\\s]+"
+    },
+    "rating": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 5
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "label",
+        "url"
+      ],
+      "properties": {
+        "label": {
+          "$ref": "#/$defs/text"
+        },
+        "url": {
+          "$ref": "#/$defs/url"
+        }
+      },
+      "additionalProperties": false
+    },
+    "theme": {
+      "type": "object",
+      "required": [
+        "title",
+        "description"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/text"
+        },
+        "description": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "additionalProperties": false
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "text",
+        "why"
+      ],
+      "properties": {
+        "text": {
+          "$ref": "#/$defs/text"
+        },
+        "why": {
+          "$ref": "#/$defs/text"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ratingSnapshot": {
+      "type": "object",
+      "required": [
+        "label",
+        "url",
+        "rating"
+      ],
+      "properties": {
+        "label": {
+          "$ref": "#/$defs/text"
+        },
+        "rating": {
+          "$ref": "#/$defs/text"
+        },
+        "url": {
+          "$ref": "#/$defs/url"
+        }
+      },
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "date",
+        "issue",
+        "source"
+      ],
+      "properties": {
+        "date": {
+          "$ref": "#/$defs/text"
+        },
+        "issue": {
+          "$ref": "#/$defs/text"
+        },
+        "rating": {
+          "$ref": "#/$defs/rating"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        }
+      },
+      "additionalProperties": false
+    },
+    "reviewGroup": {
+      "type": "object",
+      "required": [
+        "name",
+        "reviews"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/text"
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/review"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "employeeReview": {
+      "type": "object",
+      "required": [
+        "date",
+        "role",
+        "source"
+      ],
+      "properties": {
+        "date": {
+          "$ref": "#/$defs/text"
+        },
+        "role": {
+          "$ref": "#/$defs/text"
+        },
+        "positive": {
+          "$ref": "#/$defs/text"
+        },
+        "concern": {
+          "$ref": "#/$defs/text"
+        },
+        "rating": {
+          "$ref": "#/$defs/rating"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

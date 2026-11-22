@@ -1,0 +1,413 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vishal-nath-chauhan.github.io/company-research-public/schemas/company-report-bento-v1.schema.json",
+  "title": "Company interview brief bento v1",
+  "description": "Public-safe subset of the standalone bento interview brief. Do not include candidate-specific preparation or private details.",
+  "type": "object",
+  "required": [
+    "version",
+    "company",
+    "role",
+    "researched",
+    "hq",
+    "facts",
+    "what",
+    "products",
+    "questions",
+    "sources"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "company": {
+      "type": "string"
+    },
+    "legalName": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "researched": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "hq": {
+      "type": "object",
+      "required": [
+        "city",
+        "region"
+      ],
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "offices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "city",
+          "note"
+        ],
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "facts": {
+      "type": "object",
+      "required": [
+        "employees",
+        "type",
+        "founded",
+        "yearsInMarket",
+        "funding",
+        "rounds"
+      ],
+      "properties": {
+        "employees": {
+          "$ref": "#/$defs/fact"
+        },
+        "type": {
+          "$ref": "#/$defs/fact"
+        },
+        "founded": {
+          "$ref": "#/$defs/fact"
+        },
+        "yearsInMarket": {
+          "$ref": "#/$defs/fact"
+        },
+        "funding": {
+          "$ref": "#/$defs/fact"
+        },
+        "rounds": {
+          "$ref": "#/$defs/fact"
+        }
+      },
+      "additionalProperties": false
+    },
+    "what": {
+      "type": "string"
+    },
+    "how": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "k",
+          "v"
+        ],
+        "properties": {
+          "k": {
+            "type": "string"
+          },
+          "v": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "date",
+          "label",
+          "kind"
+        ],
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "company",
+              "people",
+              "product",
+              "money"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "short",
+          "steps",
+          "users"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "short": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "string"
+          },
+          "relevant": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "strengths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "competitors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "companyLeaders": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/person"
+      }
+    },
+    "productTeam": {
+      "$ref": "#/$defs/team"
+    },
+    "techTeam": {
+      "$ref": "#/$defs/team"
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "q",
+          "why"
+        ],
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "why": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "prep": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "t",
+          "d"
+        ],
+        "properties": {
+          "t": {
+            "type": "string"
+          },
+          "d": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "employeeReviews": {
+      "type": "object",
+      "required": [
+        "headline",
+        "scores",
+        "pros",
+        "cons",
+        "rows"
+      ],
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "scores": {
+          "type": "array"
+        },
+        "pros": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rows": {
+          "type": "array"
+        }
+      },
+      "additionalProperties": false
+    },
+    "customerReviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "where",
+          "text"
+        ],
+        "properties": {
+          "where": {
+            "type": "string"
+          },
+          "score": {},
+          "count": {},
+          "text": {
+            "type": "string"
+          },
+          "est": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ],
+        "minItems": 2,
+        "maxItems": 2
+      }
+    }
+  },
+  "$defs": {
+    "fact": {
+      "type": "object",
+      "required": [
+        "v",
+        "note"
+      ],
+      "properties": {
+        "v": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "note": {
+          "type": "string"
+        },
+        "est": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "person": {
+      "type": "object",
+      "required": [
+        "name",
+        "title",
+        "bio"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "bio": {
+          "type": "string"
+        },
+        "linkedin": {
+          "anyOf": [
+            {
+              "const": ""
+            },
+            {
+              "type": "string",
+              "pattern": "^https://([a-z]+\\.)?linkedin\\.com/in/"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "team": {
+      "type": "object",
+      "required": [
+        "note",
+        "counts",
+        "leaders"
+      ],
+      "properties": {
+        "note": {
+          "type": "string"
+        },
+        "counts": {
+          "type": "array"
+        },
+        "leaders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/person"
+          }
+        },
+        "est": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
