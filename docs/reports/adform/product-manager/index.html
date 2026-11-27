@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Company interview brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe6;--ink:#1d1b18;--mute:#6f685d;--card:#fffdf8;--line:#e5dccb;--o:#ff7a3d;--g:#2fbf71;--b:#3d6bff;--y:#ffd23f;--p:#b980ff}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 "DM Sans",system-ui,sans-serif;padding:56px clamp(16px,5vw,80px) 80px;max-width:1440px;margin:0 auto}
+h1,h2,.big{font-family:"Bricolage Grotesque",sans-serif}
+.top{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:44px}
+.top h1{font-size:clamp(40px,6vw,76px);font-weight:800;letter-spacing:-.03em;line-height:.95}
+.top p{color:var(--mute)}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.nav a{padding:9px 16px;border-radius:99px;background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:500}
+.nav a:hover{background:var(--ink);color:var(--bg)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:28px}
+.t{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px;position:relative;min-width:0}
+.t h2{font-size:13px;font-weight:700;font-family:"DM Sans";text-transform:uppercase;letter-spacing:.1em;color:var(--mute);margin-bottom:22px;display:flex;align-items:center;gap:8px}
+.t h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.big{font-size:38px;font-weight:800;line-height:1}
+.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.fill{background:var(--c);border-color:transparent}
+.mute{color:var(--mute)}
+.empty{color:var(--mute);font-style:italic}
+.est{font:700 9px "DM Sans";letter-spacing:.08em;background:#e8f0ff;color:#2a4fcf;border:1px solid #b9cbff;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
+.map{display:flex;flex-direction:column;gap:16px;margin-top:24px}
+.loc{display:flex;gap:10px;align-items:center}
+.loc i{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:#0000000d;font-style:normal;flex:none}
+.how{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.how div{background:#00000006;border-radius:18px;padding:20px}
+.how b{display:block;margin:6px 0 4px}
+.how em{font:800 22px "Bricolage Grotesque";font-style:normal;color:var(--o)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{padding:20px;border-radius:20px;background:#00000006}
+.kpi small{display:block;color:var(--mute);font-size:12px;margin:4px 0}
+.tl div{display:grid;grid-template-columns:86px 14px 1fr;gap:10px;align-items:start;padding-bottom:22px;position:relative}
+.tl div i{width:14px;height:14px;border-radius:50%;background:var(--c,var(--b));margin-top:3px;position:relative;z-index:1}
+.tl div:not(:last-child)::after{content:"";position:absolute;left:102px;top:16px;bottom:0;width:2px;background:var(--line)}
+.tl b{font-size:12px}
+.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prod{border-radius:20px;padding:24px;background:#00000005;border:2px solid transparent}
+.prod.rel{border-color:var(--b);background:#3d6bff0d}
+.prod h3{font-size:15px;display:flex;justify-content:space-between;gap:8px}
+.prod ol{list-style:none;padding:0;margin:18px 0;counter-reset:s;display:grid;gap:9px}
+.prod li{counter-increment:s;display:flex;gap:8px;font-size:12.5px}
+.prod li::before{content:counter(s);width:18px;height:18px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:10px;display:grid;place-items:center;flex:none}
+.pill{font-size:10px;font-weight:700;background:var(--b);color:#fff;padding:2px 7px;border-radius:99px;height:fit-content;white-space:nowrap}
+.stack{display:flex;height:16px;border-radius:99px;overflow:hidden;margin:16px 0 12px}
+.stack span{height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:4px}
+.ppl{display:grid;gap:20px;margin-top:28px}
+.ppl.wide{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:0}
+.pp{display:flex;gap:14px;align-items:flex-start}
+.av{width:44px;height:44px;border-radius:12px;flex:none;display:grid;place-items:center;font-weight:700;color:#fff;background:var(--c)}
+.pp p{font-size:12px;color:var(--mute)}
+.pp a{margin-left:auto;font-weight:700;font-size:11px;color:#fff;background:#0a66c2;padding:3px 7px;border-radius:5px;text-decoration:none;flex:none}
+.q{padding:20px 0;border-top:1px solid #00000022;display:grid;grid-template-columns:40px 1fr;gap:12px}
+.q:first-of-type{border-top:0}
+.q .big{font-size:26px}
+.q p{font-weight:700;font-size:15px}
+.q small{color:#1d1b18bb;display:block;margin-top:6px}
+.ck{display:flex;gap:12px;padding:12px 0;cursor:pointer}
+.ck input{accent-color:var(--g);width:17px;height:17px;flex:none;margin-top:2px}
+.rv{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.st{color:#e59a00}
+.gauge{display:flex;align-items:baseline;gap:6px}
+.scores{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}
+.sc{background:#00000006;border-radius:18px;padding:16px}
+.sc .big{font-size:32px}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pc ul{list-style:none;padding:0;display:grid;gap:8px;margin-top:10px}
+.pc li{padding:9px 12px;border-radius:12px;font-size:13px}
+.pc .p li{background:#2fbf7114}.pc .c li{background:#ff7a3d14}
+.chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:#2fbf7118;border-radius:10px;padding:6px 10px;font-size:12px}
+.src{columns:3;column-gap:28px;font-size:13px}
+.src a{display:block;color:var(--ink);padding:5px 0;break-inside:avoid}
+@media(max-width:980px){body{padding:32px 16px 56px}.bento{gap:18px}.t{padding:22px}.c4,.c5,.c6,.c7,.c8{grid-column:span 12}.prods{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.scores,.pc{grid-template-columns:1fr}.src{columns:1}}
+@media(max-width:560px){.kpis{grid-template-columns:1fr 1fr}.prods,.how{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div><p id="meta"></p><h1 id="name"></h1><p id="tag" style="font-size:17px;color:var(--ink);max-width:62ch;margin-top:6px"></p></div>
+  <nav class="nav"><a href="#co">Company</a><a href="#pr">Products</a><a href="#te">Teams</a><a href="#iv">Interview</a><a href="#rv">Reviews</a><a href="#sr">Sources</a></nav>
+</header>
+
+<main class="bento">
+  <section class="t c4 fill" style="--c:var(--y)" id="co"><h2>Where</h2><div class="big" id="hq"></div><div class="map" id="offices"></div></section>
+  <section class="t c8"><h2><span class="dot" style="--c:var(--o)"></span>At a glance</h2><div class="kpis" id="kpis"></div></section>
+
+  <section class="t c7"><h2><span class="dot" style="--c:var(--o)"></span>What they do → how they do it</h2><p style="font-size:18px;margin-bottom:22px" id="what"></p><div class="how" id="how"></div></section>
+  <section class="t c5"><h2><span class="dot" style="--c:var(--b)"></span>Timeline · funding &amp; milestones</h2><div class="tl" id="tl"></div></section>
+
+  <section class="t c12" id="pr"><h2><span class="dot" style="--c:var(--b)"></span>Products · how each one works</h2><div class="prods" id="prods"></div></section>
+
+  <section class="t c12"><h2><span class="dot" style="--c:var(--y)"></span>Company leadership</h2><div class="ppl wide" id="cl"></div></section>
+  <section class="t c6" id="te"><h2><span class="dot" style="--c:var(--p)"></span>Product team</h2><div id="pteam"></div></section>
+  <section class="t c6"><h2><span class="dot" style="--c:var(--g)"></span>Tech team</h2><div id="tteam"></div></section>
+
+  <section class="t c7 fill" style="--c:#c9f0d9" id="iv"><h2>Ask the interviewer</h2><div id="qs"></div></section>
+  <section class="t c5"><h2><span class="dot" style="--c:var(--g)"></span>Role context</h2><div id="prep"></div></section>
+
+  <section class="t c7" id="rv"><h2><span class="dot" style="--c:var(--p)"></span>What employees say</h2><div id="emp"></div></section>
+  <section class="t c5"><h2><span class="dot" style="--c:var(--o)"></span>What customers say</h2><div id="cust"></div></section>
+
+  <section class="t c12" id="sr"><h2><span class="dot" style="--c:var(--mute)"></span>Sources</h2><div class="src" id="src"></div></section>
+</main>
+
+<script id="company-report-data" type="application/json">
+{
+ "version": 1,
+ "company": "Adform",
+ "legalName": "Adform A/S",
+ "role": "Product Manager",
+ "researched": "27 Nov 2026",
+ "tagline": "Independent European adtech platform with global FLOW suite and a growing Mumbai product, data and software hub.",
+ "hq": {
+  "city": "Copenhagen",
+  "region": "Denmark · Rosenborggade 15, 2nd floor, 1130 Copenhagen K"
+ },
+ "offices": [
+  {
+   "city": "Mumbai, India",
+   "note": "BKC Annexe; development site established 2022, expanded software, product, IT and customer service."
+  },
+  {
+   "city": "Vilnius, Lithuania",
+   "note": "Largest physical site; software development since 2006, plus customer service, sales operations, finance, legal and HR."
+  },
+  {
+   "city": "Warsaw, Poland",
+   "note": "Software development site since 2014; data-science expertise."
+  },
+  {
+   "city": "Copenhagen, Denmark",
+   "note": "Registered office and headquarters."
+  },
+  {
+   "city": "Sydney; Vienna; Prague; Tallinn; Helsinki; Paris; Düsseldorf, Hamburg and Munich; Milan; Tokyo; Amsterdam; Oslo; Bucharest; Singapore; Johannesburg; Madrid; Stockholm; Istanbul; Dubai; London; New York",
+   "note": "Official directory locations; local sales, service and support work with central product and engineering. Annual report: 29 offices across 24 countries; function splits by city not published."
+  }
+ ],
+ "what": "Adform gives advertisers, agencies and publishers a platform to plan, buy, optimize and sell digital ad inventory across channels.",
+ "how": [
+  {
+   "k": "Buy side",
+   "v": "Advertisers and agencies set goals, audiences, budgets and inventory in FLOW."
+  },
+  {
+   "k": "Real-time execution",
+   "v": "The DSP bids on impressions and serves creatives; ML supports bidding, predictions, fraud filtering and optimization."
+  },
+  {
+   "k": "Sell side",
+   "v": "Publishers connect inventory to the SSP and monetize through real-time auctions."
+  },
+  {
+   "k": "Delivery",
+   "v": "Self-serve software plus local sales, onboarding, service and support; centralized product and engineering."
+  }
+ ],
+ "facts": {
+  "employees": {
+   "v": "700+",
+   "note": "Adform Careers claim; LinkedIn band 501–1,000 and 864 associated members; VIA Equity lists ~700. Measures differ.",
+   "est": true
+  },
+  "type": {
+   "v": "Private global MNC",
+   "note": "Independent European adtech provider operating in 24 countries."
+  },
+  "founded": {
+   "v": "2002",
+   "note": "Established 17 Jan 2002 in Copenhagen, per 2025 annual report."
+  },
+  "yearsInMarket": {
+   "v": "24 years",
+   "note": "2002–2026."
+  },
+  "funding": {
+   "v": "Private-equity backed",
+   "note": "GRO Capital invested in 2019; VIA Equity in 2020. Latest disclosed event: 2020 VIA investment; amount not found."
+  },
+  "rounds": {
+   "v": "At least 4 documented equity events",
+   "note": "Reported 2014 Series B and 2015 Danica; 2019 GRO disclosed DKK 225m equity injection; 2020 VIA investment, undisclosed. Early labels differ; no reliable total raised."
+  }
+ },
+ "timeline": [
+  {
+   "date": "17 Jan 2002",
+   "label": "Adform A/S established in Copenhagen by Gustav Mellentin, Jakob Bak and Stefan Juricic",
+   "kind": "company"
+  },
+  {
+   "date": "2014–15",
+   "label": "Reported Series B ($5.5m) and Danica investment ($22m); secondary database",
+   "kind": "money"
+  },
+  {
+   "date": "Apr 2019",
+   "label": "GRO Capital became shareholder; DKK 225m equity injection in annual-report record",
+   "kind": "money"
+  },
+  {
+   "date": "2020",
+   "label": "VIA Equity made a further investment; amount undisclosed",
+   "kind": "money"
+  },
+  {
+   "date": "2022",
+   "label": "Mumbai development site established",
+   "kind": "company"
+  },
+  {
+   "date": "2025",
+   "label": "Launched Campaign Planner enhancements; acquired Splicky for DACH/DOOH; revenue €103.4m",
+   "kind": "product"
+  }
+ ],
+ "products": [
+  {
+   "name": "Adform FLOW",
+   "short": "Integrated DSP, ad server and DMP",
+   "icon": "◈",
+   "steps": [
+    "Plan campaigns across display, video, CTV, audio, DOOH or retail media",
+    "Build audiences and choose inventory, formats and budget",
+    "Bid for impressions in real time and serve creatives",
+    "Measure delivery and optimize against goals"
+   ],
+   "users": "Advertisers and agencies buy · traders and campaign teams operate"
+  },
+  {
+   "name": "Adform IQ + Campaign Planner",
+   "short": "AI-assisted omnichannel planning and optimization",
+   "icon": "✦",
+   "steps": [
+    "Enter campaign brief, channels, goals and constraints",
+    "Use recommendations and forecasts to plan media",
+    "Create and activate cross-channel workflows",
+    "Compare outcomes and tune delivery"
+   ],
+   "users": "Advertisers and agencies buy · planners and traders use"
+  },
+  {
+   "name": "Audience Manager / DMP",
+   "short": "Onboard, segment and activate audience data",
+   "icon": "◎",
+   "steps": [
+    "Connect first-party and partner data",
+    "Build audience segments and lookalikes",
+    "Activate segments in DSP campaigns",
+    "Measure reach and performance"
+   ],
+   "users": "Brands, agencies and publishers buy · data and media teams use"
+  },
+  {
+   "name": "Publisher Edge / SSP",
+   "short": "Publisher monetization and ad serving",
+   "icon": "↗",
+   "steps": [
+    "Connect inventory and header-bidding integrations",
+    "Set auction, buyer and brand-safety controls",
+    "Offer impressions in real-time auctions",
+    "Review yield, fill and audience insights"
+   ],
+   "users": "Publishers buy · ad operations and yield teams use"
+  },
+  {
+   "name": "Traffic quality and fraud controls",
+   "short": "IVT prevention, investigations and compliance",
+   "icon": "✓",
+   "steps": [
+    "Score traffic signals for invalid activity",
+    "Apply ML-driven filters and blocklists",
+    "Review exceptions and whitelist requests",
+    "Document methodology and support MRC/TAG reviews"
+   ],
+   "users": "Adform product, data science and traffic-quality teams"
+  }
+ ],
+ "strengths": [
+  "€103.4m 2025 revenue; 1% reported growth and ~5% underlying growth after one-off adjustment.",
+  "~1.5bn ads served daily in 2025; activity in 180+ countries.",
+  "Client NPS rose from 50 (2024) to 61 (2025).",
+  "Mumbai hub grew 19% in 2025; software, product, IT and customer-service capacity."
+ ],
+ "competitors": [
+  "Google Marketing Platform / Display & Video 360",
+  "The Trade Desk",
+  "Xandr / Microsoft Advertising",
+  "StackAdapt",
+  "AdRoll"
+ ],
+ "companyLeaders": [
+  {
+   "name": "Troels Philip Jensen",
+   "title": "CEO · joined Apr 2020",
+   "bio": "25+ years in enterprise software and fintech. Former COO at Itiviti and Managing Director, Western Europe at SimCorp; leads international growth.",
+   "linkedin": "https://dk.linkedin.com/in/troels-jensen-781a0274"
+  },
+  {
+   "name": "Dr. Jochen Schlosser",
+   "title": "CTO · joined 2016",
+   "bio": "Owns technology vision and product/technology direction. Former executive-board member at uniquedigital; computer-science graduate of RWTH Aachen with doctorate from Hamburg.",
+   "linkedin": "https://de.linkedin.com/in/jochenschlosser"
+  },
+  {
+   "name": "Gustav Mellentin",
+   "title": "Co-founder · CEO 2002–2020; board member",
+   "bio": "Co-founded Adform to automate advertising workflows; earlier consulting and financial-modeling experience.",
+   "linkedin": ""
+  },
+  {
+   "name": "Jakob Toftgaard Bak",
+   "title": "Co-founder · former CTO; board member",
+   "bio": "Platform technology architect across ad serving, analytics and business intelligence; active in advertising policy and GDPR.",
+   "linkedin": ""
+  },
+  {
+   "name": "Stefan Juricic",
+   "title": "Co-founder · former CPO",
+   "bio": "Co-founded Adform in 2002; Crunchbase lists Co-Founder & CPO. Current executive role not confirmed on official leadership page.",
+   "linkedin": ""
+  },
+  {
+   "name": "Thomas Park",
+   "title": "SVP Product Strategy",
+   "bio": "Sets global strategy for buy- and sell-side commercial products; previously eight years at Google and analytics work at DentsuAegis.",
+   "linkedin": ""
+  },
+  {
+   "name": "Nirav Shah",
+   "title": "SVP, Site Manager India",
+   "bio": "Leads Mumbai big data, platform foundations, product-management operations and customer service; 28 years in capital markets, cash management and adtech.",
+   "linkedin": ""
+  }
+ ],
+ "productTeam": {
+  "note": "LinkedIn People snapshot (27 Nov 2026): 37 associated members in Product Management globally; search surfaced PMs in Mumbai, Vilnius, Kaunas and Dubai. No reliable APM/design/delivery split.",
+  "counts": [
+   {
+    "role": "Product Management · LinkedIn function count",
+    "n": 37
+   },
+   {
+    "role": "APM / design / delivery split",
+    "n": "Not found"
+   }
+  ],
+  "leaders": [
+   {
+    "name": "Thomas Park",
+    "title": "SVP Product Strategy",
+    "bio": "Owns commercial buy/sell-side product strategy; former Google product and measurement roles. Official bio; start date not published.",
+    "linkedin": ""
+   },
+   {
+    "name": "Rohan Bhatia",
+    "title": "Team Manager – Product, Mumbai · LinkedIn lists since Feb 2026",
+    "bio": "LinkedIn search describes him leading India product management and AI product work; profile-derived summary.",
+    "linkedin": "https://www.linkedin.com/in/rohan-bhatia-983817140/"
+   },
+   {
+    "name": "Nirav Shah",
+    "title": "SVP, Site Manager India",
+    "bio": "Official bio includes product-management operations across Mumbai site.",
+    "linkedin": ""
+   }
+  ]
+ },
+ "techTeam": {
+  "note": "LinkedIn company People snapshot: 864 associated members; 204 under Engineering and 91 under Information Technology. Categories may overlap and are not audited payroll counts.",
+  "counts": [
+   {
+    "role": "Engineering · LinkedIn function category",
+    "n": 204
+   },
+   {
+    "role": "Information Technology · LinkedIn function category",
+    "n": 91
+   },
+   {
+    "role": "Data Science headcount",
+    "n": "Not found"
+   }
+  ],
+  "leaders": [
+   {
+    "name": "Dr. Jochen Schlosser",
+    "title": "CTO",
+    "bio": "Leads technology and product/technology direction; background in data-driven businesses across pharma, finance and marketing.",
+    "linkedin": "https://de.linkedin.com/in/jochenschlosser"
+   },
+   {
+    "name": "Nirav Shah",
+    "title": "SVP, Site Manager India",
+    "bio": "Mumbai technology-site leader spanning big data, platform foundations and product operations.",
+    "linkedin": ""
+   }
+  ]
+ },
+ "employeeReviews": {
+  "headline": "Employee feedback is mixed: some praise colleagues and culture; recent Glassdoor reviews flag uneven management and processes. Samples are self-selected.",
+  "scores": [
+   {
+    "where": "Glassdoor · Adform",
+    "score": 3.8,
+    "count": 210,
+    "extra": "73% recommend; 80% CEO approval; Nov 2026"
+   },
+   {
+    "where": "Indeed · Adform",
+    "score": 3.8,
+    "count": 5,
+    "extra": "Updated 9 Jun 2026 · tiny sample"
+   },
+   {
+    "where": "AmbitionBox · Adform",
+    "score": null,
+    "count": null,
+    "extra": "No company-specific score verified"
+   }
+  ],
+  "pros": [
+   "Glassdoor snippets: friendly colleagues, good culture, modern technology and interesting work.",
+   "Indeed reviews mention growth opportunities; JD lists health cover and 24 paid vacation days.",
+   "Glassdoor category scores: culture and work-life balance 4.0/5."
+  ],
+  "cons": [
+   "Glassdoor snippets flag low pay in some regions, uneven middle management and unclear/changing HR processes.",
+   "Recent reviewer describes politics and limited openness to suggestions; anecdotal.",
+   "Glassdoor senior management and compensation categories: 3.5/5 each."
+  ],
+  "rows": [
+   {
+    "rating": "1/5",
+    "role": "Manager · Glassdoor",
+    "date": "13 Nov 2026",
+    "pro": "Mentions top-management access and some strong teammates.",
+    "con": "Headline: “Good product. Poor way of work.” Detailed criticism not visible in snippet."
+   },
+   {
+    "rating": "3/5",
+    "role": "Anonymous employee · Glassdoor",
+    "date": "9 Oct 2026",
+    "pro": "Nice office in a pleasant area.",
+    "con": "Says poor management and politics hinder progress."
+   },
+   {
+    "rating": "Not shown",
+    "role": "Anonymous · Indeed",
+    "date": "9 Jun 2026",
+    "pro": "Review headline: “Potential for growth, terrible leadership.”",
+    "con": "Reviewer says team experiences vary widely; rating details not exposed."
+   }
+  ]
+ },
+ "customerReviews": [
+  {
+   "where": "Gartner Peer Insights · Adform FLOW",
+   "score": 4.4,
+   "count": 193,
+   "text": "All-time reviews; users praise integrations and campaign results; one 2023 review criticizes navigation and custom-report filters."
+  },
+  {
+   "where": "G2 · Integrated Advertising Platform",
+   "score": 4.3,
+   "count": 11,
+   "text": "Small sample; users like flexibility, targeting and reporting; caveats include onboarding complexity, tracking setup and budget controls."
+  },
+  {
+   "where": "G2 · Adform DSP",
+   "score": 4.0,
+   "count": 4,
+   "text": "Very small sample; multi-signal audience targeting across inventory and formats."
+  }
+ ],
+ "questions": [
+  {
+   "q": "How does Adform measure whether bidding and audience models improve client outcomes?",
+   "why": "Connects experimentation, delivery quality and business KPIs."
+  },
+  {
+   "q": "When should traffic-quality exceptions become changes to a model or workflow?",
+   "why": "Explores the operating boundary between fraud operations and product development."
+  },
+  {
+   "q": "What quality controls are needed as AI recommendations and omnichannel planning expand?",
+   "why": "Ties product strategy to transparent, compliant outcomes."
+  }
+ ],
+ "prep": [
+  {
+   "t": "Role scope",
+   "d": "Product management embedded with Data Science; owns backlog, stories, acceptance criteria and stakeholder translation."
+  },
+  {
+   "t": "Model evaluation",
+   "d": "Bidding, delivery prediction and audience-model outputs are assessed against business KPIs; supports investigations and A/B tests."
+  },
+  {
+   "t": "Traffic quality",
+   "d": "Fraud exceptions, blocklists, ads.txt, discrepancies, whitelists and IVT controls are in scope."
+  },
+  {
+   "t": "Compliance and automation",
+   "d": "MRC/TAG cycles, audit evidence and repeatable workflow automation are part of the role."
+  }
+ ],
+ "sources": [
+  [
+   "Adform Product Manager JD",
+   "https://careers.adform.com/jobs/8745358-product-manager"
+  ],
+  [
+   "Adform Careers",
+   "https://careers.adform.com/"
+  ],
+  [
+   "Global Offices",
+   "https://site.adform.com/company/global-offices/"
+  ],
+  [
+   "2025 Annual Report",
+   "https://site.adform.com/media/zwkpcmh5/adform-annual-report-2025.pdf"
+  ],
+  [
+   "Leadership Team",
+   "https://site.adform.com/leadership-team/"
+  ],
+  [
+   "Troels Jensen bio",
+   "https://site.adform.com/leadership-team/troels-philip-jensen/"
+  ],
+  [
+   "Jochen Schlosser bio",
+   "https://site.adform.com/leadership-team/dr-jochen-schlosser/"
+  ],
+  [
+   "Nirav Shah bio",
+   "https://site.adform.com/leadership-team/nirav-shah/"
+  ],
+  [
+   "Thomas Park product strategy",
+   "https://site.adform.com/resources/resources/the-art-of-bridging-tv-and-programmatic/"
+  ],
+  [
+   "Adform FLOW",
+   "https://site.adform.com/solutions/adform-flow/"
+  ],
+  [
+   "Adform SSP",
+   "https://site.adform.com/solutions/supply-side-platform/"
+  ],
+  [
+   "Adform 2018 Annual Report · founders",
+   "https://regnskaber.cvrapi.dk/51843462/ZG9rdW1lbnRsYWdlcjovLzAzLzdlLzY0LzgyLzdiLzM5OTMtNDA4OS04NDdiLTM4ZTgzNTJmZTdlOQ.pdf"
+  ],
+  [
+   "GRO 2019 investment",
+   "https://www.grocapital.dk/news/adform-receives-strategic-investment-from-gro-capital"
+  ],
+  [
+   "VIA Equity Adform profile",
+   "https://viaequity.com/investment/adform"
+  ],
+  [
+   "Startup Lithuania funding data",
+   "https://map.startuplithuania.lt/companies/adform"
+  ],
+  [
+   "LinkedIn Adform People",
+   "https://www.linkedin.com/company/adform/people/"
+  ],
+  [
+   "Glassdoor reviews",
+   "https://static.glassdoor.com.br/Reviews/Adform-Reviews-E373601.htm"
+  ],
+  [
+   "Indeed reviews",
+   "https://www.indeed.com/cmp/Adform/reviews?fcountry=ALL"
+  ],
+  [
+   "Gartner Peer Insights",
+   "https://www.gartner.com/reviews/market/ad-tech-platforms/vendor/adform"
+  ],
+  [
+   "G2 IAP reviews",
+   "https://www.g2.com/products/adform-integrated-advertising-platform/reviews?qs=pros-and-cons"
+  ],
+  [
+   "G2 DSP reviews",
+   "https://www.g2.com/products/adform-demand-side-platform/reviews"
+  ]
+ ]
+}
+</script>
+<script>
+(function(){
+const D=JSON.parse(document.getElementById('company-report-data').textContent);
+const $=id=>document.getElementById(id);
+const h=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const url=u=>/^https?:\/\//i.test(u||'')?h(u):'#';
+const A=x=>Array.isArray(x)?x:[];
+const none=t=>`<p class="empty">${h(t||'Not found in public sources.')}</p>`;
+const E=f=>f&&f.est?'<span class="est" title="Estimate or sources disagree">EST.</span>':'';
+const ini=n=>String(n||'?').split(/\s+/).map(w=>w[0]||'').slice(0,2).join('').toUpperCase();
+const st=n=>{const r=Math.max(0,Math.min(5,Math.round(n||0)));return `<span class="st">${'★'.repeat(r)}</span><span style="color:#ddd">${'★'.repeat(5-r)}</span>`};
+
+document.title=`${D.company||'Company'} · interview brief`;
+$('meta').textContent=[D.role,D.legalName,D.researched&&`researched ${D.researched}`].filter(Boolean).join(' · ');
+$('name').textContent=D.company||'Company';
+$('tag').textContent=D.tagline||'';
+const hq=D.hq||{};
+$('hq').innerHTML=`📍 ${h(hq.city||'—')}<div class="mute" style="font:500 13px 'DM Sans';margin-top:6px">${h(hq.region)}</div>`;
+$('offices').innerHTML=A(D.offices).map(o=>`<div class="loc"><i>🏢</i><div><b>${h(o.city)}</b><div style="font-size:12px">${h(o.note)}</div></div></div>`).join('');
+
+const F=D.facts||{};
+const K=[['Strength · people','employees','👥'],['Type','type','🚀'],['Founded','founded','📅'],['In market','yearsInMarket','⏳'],['Funding','funding','💰'],['Rounds · last','rounds','#']];
+$('kpis').innerHTML=K.map(([k,key,e])=>{const f=F[key]||{v:'—',note:'Not found'};const v=String(f.v??'—');
+ return `<div class="kpi"><small>${e} ${h(k)}${E(f)}</small><div class="big" style="font-size:${v.length>8?20:28}px">${h(v)}</div><small>${h(f.note)}</small></div>`}).join('');
+
+const kc={company:'var(--y)',people:'var(--p)',product:'var(--b)',money:'var(--o)'};
+$('tl').innerHTML=A(D.timeline).map(t=>`<div style="--c:${kc[t.kind]||'var(--b)'}"><b>${h(t.date)}</b><i></i><span>${h(t.label)}</span></div>`).join('')||none();
+$('what').textContent=D.what||'';
+$('how').innerHTML=A(D.how).map((x,i)=>`<div><em>${i+1}</em><b>${h(x.k)}</b><span class="mute">${h(x.v)}</span></div>`).join('');
+
+$('prods').innerHTML=A(D.products).map(p=>`<div class="prod ${p.relevant?'rel':''}"><h3><span>${h(p.icon||'◆')} ${h(p.name)}</span>${p.relevant?'<span class="pill">Likely your area</span>':''}</h3>
+ <div class="mute">${h(p.short)}</div><ol>${A(p.steps).map(s=>`<li>${h(s)}</li>`).join('')}</ol><small class="mute">👤 ${h(p.users)}</small></div>`).join('')||none();
+
+const person=(l,c)=>`<div class="pp"><div class="av" style="--c:${c}">${h(ini(l.name))}</div><div><b>${h(l.name)}</b> <span class="mute">· ${h(l.title)}</span><p>${h(l.bio)}</p></div>${l.linkedin?`<a href="${url(l.linkedin)}" target="_blank" rel="noopener" title="LinkedIn profile">in</a>`:''}</div>`;
+$('cl').innerHTML=A(D.companyLeaders).map(l=>person(l,'#c99a00')).join('')||none();
+
+const pal=['var(--o)','var(--b)','var(--g)','var(--p)','var(--y)'];
+function team(T,el,c){T=T||{};const counts=A(T.counts),tot=counts.reduce((a,x)=>a+(+x.n||0),0);
+ $(el).innerHTML=(tot?`<div class="gauge"><span class="big">${tot}</span><span class="mute">people found${E(T)}</span></div>
+ <div class="stack">${counts.map((x,i)=>`<span style="width:${(+x.n||0)/tot*100}%;background:${pal[i%pal.length]}"></span>`).join('')}</div>
+ <div class="legend">${counts.map((x,i)=>`<span><i style="background:${pal[i%pal.length]}"></i>${h(x.role)} <b>${h(x.n)}</b></span>`).join('')}</div>`:none('Team size not found.'))+
+ `<p class="mute" style="font-size:13px;margin-top:14px">${h(T.note)}</p><div class="ppl">${A(T.leaders).map(l=>person(l,c)).join('')}</div>`;}
+team(D.productTeam,'pteam','var(--p)');team(D.techTeam,'tteam','var(--g)');
+
+$('qs').innerHTML=A(D.questions).map((q,i)=>`<div class="q"><span class="big">${i+1}</span><div><p>“${h(q.q)}”</p><small>${h(q.why)}</small></div></div>`).join('')||none();
+$('prep').innerHTML=A(D.prep).map(p=>`<label class="ck"><input type="checkbox"><span><b>${h(p.t)}</b> — <span class="mute">${h(p.d)}</span></span></label>`).join('')||none();
+
+const R=D.employeeReviews||{};
+$('emp').innerHTML=(R.headline?`<p style="margin:0 0 18px">${h(R.headline)}</p>`:'')+
+ (A(R.scores).length?`<div class="scores">${A(R.scores).map(s=>`<div class="sc"><small class="mute">${h(s.where)}${E(s)}</small><div class="big">${s.score==null?'—':h(s.score)}</div>${s.score!=null?st(s.score):''}<div class="mute" style="font-size:12px">${h(s.count??0)} reviews${s.extra?' · '+h(s.extra):''}</div></div>`).join('')}</div>`:none('No employee ratings found.'))+
+ (A(R.pros).length||A(R.cons).length?`<div class="pc"><div class="p"><b>👍 Pros</b><ul>${A(R.pros).map(x=>`<li>${h(x)}</li>`).join('')}</ul></div><div class="c"><b>⚠️ Cons</b><ul>${A(R.cons).map(x=>`<li>${h(x)}</li>`).join('')}</ul></div></div>`:'')+
+ A(R.rows).map(r=>`<div class="rv" style="margin-top:14px"><span>${r.rating!=null?st(r.rating):''} <b>${h(r.role)}</b> · ${h(r.date)}</span><span>✅ ${h(r.pro)}<br>⚠️ ${h(r.con)}</span></div>`).join('');
+
+$('cust').innerHTML=(A(D.customerReviews).map(r=>`<div class="rv"><span><b>${h(r.where)}</b><br><span class="mute">${h(r.text)}</span></span><span style="white-space:nowrap">${r.score!=null?`${st(r.score)} <b>${h(r.score)}</b>${E(r)}`:'<span class="mute">—</span>'}${r.count!=null?` <span class="mute">(${h(r.count)})</span>`:''}</span></div>`).join('')||none('No end-user reviews found.'))+
+ (A(D.strengths).length?`<div class="chips">${A(D.strengths).map(s=>`<span>💪 ${h(s)}</span>`).join('')}</div>`:'')+
+ (A(D.competitors).length?`<p class="mute" style="margin-top:14px;font-size:12px">Rivals: ${A(D.competitors).map(h).join(' · ')}</p>`:'');
+
+$('src').innerHTML=A(D.sources).map(s=>`<a href="${url(s[1])}" target="_blank" rel="noopener">↗ ${h(s[0])}</a>`).join('')||none();
+})();
+</script>
+</body>
+</html>
